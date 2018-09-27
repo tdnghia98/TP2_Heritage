@@ -30,8 +30,9 @@ public:
 // Contrat :
 //
 
-    virtual char* GetLieuDepart() = 0;
-    virtual char* GetLieuArrivee() = 0;
+    virtual char* GetLieuDepart() const = 0;
+    virtual char* GetLieuArrivee() const = 0;
+
 //------------------------------------------------- Surcharge d'opérateurs
 // ${file_base} & operator = ( const ${file_base} & un${file_base} );
 // Mode d'emploi :

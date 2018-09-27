@@ -6,23 +6,27 @@
 #define TP2_HERITAGE_TRAJETSIMPLE_H
 
 //--------------------------------------------------- Interfaces utilisées
+#include "Trajet.h"
 
 //------------------------------------------------------------- Constantes
 
 //------------------------------------------------------------------ Types
 
 //------------------------------------------------------------------------
-// Rôle de la classe <${file_base}>
+// Rôle de la classe <TrajetSimple>
 //
 //
 //------------------------------------------------------------------------
 
-class ${file_base} : public Ancetre
+class TrajetSimple : public Trajet
 {
 //----------------------------------------------------------------- PUBLIC
 
 public:
 //----------------------------------------------------- Méthodes publiques
+virtual char* GetLieuDepart() const;
+
+virtual char* GetLieuArrivee() const;
 // type Méthode ( liste de paramètres );
 // Mode d'emploi :
 //
@@ -31,7 +35,7 @@ public:
 
 
 //------------------------------------------------- Surcharge d'opérateurs
-${file_base} & operator = ( const ${file_base} & un${file_base} );
+//${file_base} & operator = ( const ${file_base} & un${file_base} );
 // Mode d'emploi :
 //
 // Contrat :
@@ -39,19 +43,19 @@ ${file_base} & operator = ( const ${file_base} & un${file_base} );
 
 
 //-------------------------------------------- Constructeurs - destructeur
-${file_base} ( const ${file_base} & un${file_base} );
+//${file_base} ( const ${file_base} & un${file_base} );
 // Mode d'emploi (constructeur de copie) :
 //
 // Contrat :
 //
 
-${file_base} ( );
+TrajetSimple (char* LieuDepart, char* LieuArrivee, char* MoyenTransport);
 // Mode d'emploi :
 //
 // Contrat :
 //
 
-virtual ~${file_base} ( );
+virtual ~TrajetSimple();
 // Mode d'emploi :
 //
 // Contrat :
@@ -60,16 +64,19 @@ virtual ~${file_base} ( );
 //------------------------------------------------------------------ PRIVE
 
 protected:
+//----------------------------------------------------- Attributs protégés
+
 //----------------------------------------------------- Méthodes protégées
 
 private:
-//------------------------------------------------------- Méthodes privées
-
-protected:
-//----------------------------------------------------- Attributs protégés
-
-private:
 //------------------------------------------------------- Attributs privés
+char* lieuDepart;
+
+char* lieuArrivee;
+
+char* moyenTransport;
+
+//------------------------------------------------------- Méthodes privées
 
 //---------------------------------------------------------- Classes amies
 
