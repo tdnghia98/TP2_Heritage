@@ -25,9 +25,18 @@ class TrajetSimple : public Trajet
 public:
 //----------------------------------------------------- Méthodes publiques
 virtual char* GetLieuDepart() const;
+// Mode d'emploi :
+//
+// Contrat :
+//
 
 virtual char* GetLieuArrivee() const;
-// type Méthode ( liste de paramètres );
+// Mode d'emploi :
+//
+// Contrat :
+//
+
+virtual void Afficher() const;
 // Mode d'emploi :
 //
 // Contrat :

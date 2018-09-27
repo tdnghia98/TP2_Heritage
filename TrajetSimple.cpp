@@ -35,6 +35,11 @@ char* TrajetSimple::GetLieuArrivee() const
     return lieuArrivee;
 } //----- Fin de Méthode
 
+void TrajetSimple::Afficher() const
+{
+    cout << "{" << lieuDepart << " -> " << lieuArrivee << " : " << moyenTransport <<"}" << endl;
+}
+
 
 //------------------------------------------------- Surcharge d'opérateurs
 //${file_base} & ${file_base}::operator = ( const ${file_base} & un${file_base} )
@@ -62,7 +67,7 @@ TrajetSimple::TrajetSimple (char* unLD, char* unLA, char* unMT) : lieuDepart(unL
     #ifdef MAP
     cout << "Appel au constructeur de <${file_base}>" << endl;
     #endif
-} //----- Fin de ${file_base}
+} //----- Fin de TrajetSimple
 
 
 TrajetSimple::~TrajetSimple( )
@@ -76,7 +81,7 @@ TrajetSimple::~TrajetSimple( )
     #ifdef MAP
     cout << "Appel au destructeur de <${file_base}>" << endl;
     #endif
-} //----- Fin de ~${file_base}
+} //----- Fin de ~TrajetSimple
 
 
 //------------------------------------------------------------------ PRIVE
