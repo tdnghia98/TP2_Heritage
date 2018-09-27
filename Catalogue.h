@@ -18,7 +18,7 @@
 // Elle permet de stocker et faire des recherches de trajet
 //------------------------------------------------------------------------
 
-class ${file_base} : public Ancetre
+class Catalogue
 {
 //----------------------------------------------------------------- PUBLIC
 

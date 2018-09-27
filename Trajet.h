@@ -13,12 +13,12 @@
 //------------------------------------------------------------------ Types
 
 //------------------------------------------------------------------------
-// Rôle de la classe <${file_base}>
+// Rôle de la classe <Trajet>
 //
 //
 //------------------------------------------------------------------------
 
-class ${file_base} : public Ancetre
+class Trajet
 {
 //----------------------------------------------------------------- PUBLIC
 
@@ -30,9 +30,10 @@ public:
 // Contrat :
 //
 
-
+    virtual char* GetLieuDepart() = 0;
+    virtual char* GetLieuArrivee() = 0;
 //------------------------------------------------- Surcharge d'opérateurs
-${file_base} & operator = ( const ${file_base} & un${file_base} );
+// ${file_base} & operator = ( const ${file_base} & un${file_base} );
 // Mode d'emploi :
 //
 // Contrat :
@@ -40,37 +41,31 @@ ${file_base} & operator = ( const ${file_base} & un${file_base} );
 
 
 //-------------------------------------------- Constructeurs - destructeur
-${file_base} ( const ${file_base} & un${file_base} );
-// Mode d'emploi (constructeur de copie) :
+//${file_base} ( const ${file_base} & un${file_base} );
+//// Mode d'emploi (constructeur de copie) :
+////
+//// Contrat :
+////
 //
-// Contrat :
+//${file_base} ( );
+//// Mode d'emploi :
+////
+//// Contrat :
+////
 //
-
-${file_base} ( );
-// Mode d'emploi :
-//
-// Contrat :
-//
-
-virtual ~${file_base} ( );
-// Mode d'emploi :
-//
-// Contrat :
-//
+//virtual ~${file_base} ( );
+//// Mode d'emploi :
+////
+//// Contrat :
+////
 
 //------------------------------------------------------------------ PRIVE
 
-protected:
+//protected:
 //----------------------------------------------------- Méthodes protégées
 
-private:
+//private:
 //------------------------------------------------------- Méthodes privées
-
-protected:
-//----------------------------------------------------- Attributs protégés
-
-private:
-//------------------------------------------------------- Attributs privés
 
 //---------------------------------------------------------- Classes amies
 
