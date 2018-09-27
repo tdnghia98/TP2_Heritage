@@ -21,49 +21,45 @@ using namespace std;
 //-------------------------------------------------------- Fonctions amies
 
 //----------------------------------------------------- Méthodes publiques
-// type ${file_base}::Méthode ( liste de paramètres )
-// Algorithme :
-//
+void Catalogue::Afficher() {
+    cout << "Affichage du tableau de Trajet: ";
+    for (int i = 0; i < nbTrajetActuel; i++) {
+        tableauTrajet[i].Afficher();
+    }
+    cout << endl;
+}
+
+
+////------------------------------------------------- Surcharge d'opérateurs
+//${file_base} & ${file_base}::operator = ( const ${file_base} & un${file_base} )
+//// Algorithme :
+////
 //{
-//} //----- Fin de Méthode
-
-
-//------------------------------------------------- Surcharge d'opérateurs
-${file_base} & ${file_base}::operator = ( const ${file_base} & un${file_base} )
-// Algorithme :
-//
-{
-} //----- Fin de operator =
+//} //----- Fin de operator =
 
 
 //-------------------------------------------- Constructeurs - destructeur
-${file_base}::${file_base} ( const ${file_base} & un${file_base} )
-// Algorithme :
-//
-{
+Catalogue::Catalogue(int n)
+{// n = nb Trajet max
 #ifdef MAP
 cout << "Appel au constructeur de copie de <${file_base}>" << endl;
 #endif
-} //----- Fin de ${file_base} (constructeur de copie)
+    nbTrajetMax = n;
+    tableauTrajet = new Trajet*[n];
+    nbTrajetActuel = 0;
+}
 
-
-${file_base}::${file_base} ( )
-// Algorithme :
-//
-{
-#ifdef MAP
-cout << "Appel au constructeur de <${file_base}>" << endl;
-#endif
-} //----- Fin de ${file_base}
-
-
-${file_base}::~${file_base} ( )
-// Algorithme :
-//
+Catalogue::~Catalogue()
 {
 #ifdef MAP
 cout << "Appel au destructeur de <${file_base}>" << endl;
 #endif
+// Virer tous les onjets Trajet dans le tableau
+    for (int i = 0; i < nbTrajetMax; i++) {
+        delete tableauTrajet[i];
+    }
+    // Virer le tableau trajet
+    delete[] tableauTrajet;
 } //----- Fin de ~${file_base}
 
 

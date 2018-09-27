@@ -7,7 +7,7 @@
 
 
 //--------------------------------------------------- Interfaces utilisées
-
+#include "Trajet.h"
 //------------------------------------------------------------- Constantes
 
 //------------------------------------------------------------------ Types
@@ -24,35 +24,24 @@ class Catalogue
 
 public:
 //----------------------------------------------------- Méthodes publiques
-// type Méthode ( liste de paramètres );
-// Mode d'emploi :
-//
-// Contrat :
-//
+void Afficher();
 
-
-//------------------------------------------------- Surcharge d'opérateurs
-${file_base} & operator = ( const ${file_base} & un${file_base} );
-// Mode d'emploi :
+////------------------------------------------------- Surcharge d'opérateurs
+//${file_base} & operator = ( const ${file_base} & un${file_base} );
+//// Mode d'emploi :
+////
+//// Contrat :
+////
 //
-// Contrat :
-//
-
 
 //-------------------------------------------- Constructeurs - destructeur
-${file_base} ( const ${file_base} & un${file_base} );
-// Mode d'emploi (constructeur de copie) :
+Catalogue(int nbTMax);
+// Mode d'emploi () :
 //
 // Contrat :
 //
 
-${file_base} ( );
-// Mode d'emploi :
-//
-// Contrat :
-//
-
-virtual ~${file_base} ( );
+virtual ~Catalogue();
 // Mode d'emploi :
 //
 // Contrat :
@@ -68,6 +57,9 @@ private:
 
 protected:
 //----------------------------------------------------- Attributs protégés
+Trajet** tableauTrajet; // Tableau de trajet
+int nbTrajetMax;
+int nbTrajetActuel;
 
 private:
 //------------------------------------------------------- Attributs privés
