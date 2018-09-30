@@ -1,9 +1,12 @@
-//
-// Created by dntran on 9/27/2018.
-//
+/*************************************************************************
+                           TrajetSimple  -  description
+                             -------------------
+    début                : 27/09/2018
+*************************************************************************/
 
-#ifndef TP2_HERITAGE_TRAJETSIMPLE_H
-#define TP2_HERITAGE_TRAJETSIMPLE_H
+//---------- Interface de la classe TrajetSimple (fichier TrajetSimple.h) ----------------
+#if ! defined (TRAJETSIMPLE_H)
+#define TRAJETSIMPLE_H
 
 //--------------------------------------------------- Interfaces utilisées
 #include "Trajet.h"
@@ -13,91 +16,66 @@
 //------------------------------------------------------------------ Types
 
 //------------------------------------------------------------------------
-// Rôle de la classe <TrajetSimple>
+// Rôle de la classe TrajetSimple
 //
 //
 //------------------------------------------------------------------------
 
 class TrajetSimple : public Trajet
 {
-//----------------------------------------------------------------- PUBLIC
+	//----------------------------------------------------------------- PUBLIC
 
-public:
-//----------------------------------------------------- Méthodes publiques
-virtual char* GetLieuDepart() const;
-// Mode d'emploi :
-//
-// Contrat :
-//
+	public:
+		//----------------------------------------------------- Méthodes publiques
+		virtual char* GetLieuDepart() const;
+		// Mode d'emploi :
+		//
+		// Contrat :
+		//
 
-virtual char* GetLieuArrivee() const;
-// Mode d'emploi :
-//
-// Contrat :
-//
+		virtual char* GetLieuArrivee() const;
+		// Mode d'emploi :
+		//
+		// Contrat :
+		//
 
-virtual void Afficher() const;
-// Mode d'emploi :
-//
-// Contrat :
-//
+		virtual void Afficher() const;
+		// Mode d'emploi :
+		//
+		// Contrat :
+		//
 
+		//-------------------------------------------- Constructeurs - destructeur
+		TrajetSimple (char* LieuDepart, char* LieuArrivee, char* MoyenTransport);
+		// Mode d'emploi :
+		//
+		// Contrat :
+		//
 
-//------------------------------------------------- Surcharge d'opérateurs
-//${file_base} & operator = ( const ${file_base} & un${file_base} );
-// Mode d'emploi :
-//
-// Contrat :
-//
+		virtual ~TrajetSimple();
+		// Mode d'emploi :
+		//
+		// Contrat :
+		//
 
+	//------------------------------------------------------------------ PRIVE
 
-//-------------------------------------------- Constructeurs - destructeur
-//${file_base} ( const ${file_base} & un${file_base} );
-// Mode d'emploi (constructeur de copie) :
-//
-// Contrat :
-//
+	protected:
+		//----------------------------------------------------- Méthodes protégées
 
-TrajetSimple (char* LieuDepart, char* LieuArrivee, char* MoyenTransport, int ID);
-// Mode d'emploi :
-//
-// Contrat :
-//
+		//----------------------------------------------------- Attributs protégés
 
-virtual ~TrajetSimple();
-// Mode d'emploi :
-//
-// Contrat :
-//
+	private:
+		//----------------------------------------------------- Méthodes privées
 
-//------------------------------------------------------------------ PRIVE
+		//----------------------------------------------------- Attributs privées
+		char* lieuDepart;
 
-protected:
-//----------------------------------------------------- Attributs protégés
+		char* lieuArrivee;
 
-//----------------------------------------------------- Méthodes protégées
-
-private:
-//------------------------------------------------------- Attributs privés
-char* lieuDepart;
-
-char* lieuArrivee;
-
-char* moyenTransport;
-
-
-
-//------------------------------------------------------- Méthodes privées
-
-//---------------------------------------------------------- Classes amies
-
-//-------------------------------------------------------- Classes privées
-
-//----------------------------------------------------------- Types privés
-
+		char* moyenTransport;
 };
 
-//----------------------------------------- Types dépendants de <${file_base}>
+//-------------------------------- Autres définitions dépendantes de TrajetSimple
 
-
-#endif //TP2_HERITAGE_TRAJETSIMPLE_H
+#endif // TRAJETSIMPLE_H

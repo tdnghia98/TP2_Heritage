@@ -1,5 +1,10 @@
+/*************************************************************************
+                           TrajetSimple  -  description
+                             -------------------
+    début                : 27/09/2018
+*************************************************************************/
 
-//---------- Réalisation de la classe <${file_base}> (fichier ${file_name}) --
+//---------- Réalisation de la classe TrajetSimple (fichier TrajetSimple.cpp) ------------
 
 //---------------------------------------------------------------- INCLUDE
 
@@ -12,13 +17,7 @@ using namespace std;
 
 //------------------------------------------------------------- Constantes
 
-//---------------------------------------------------- Variables de classe
-
-//----------------------------------------------------------- Types privés
-
-
 //----------------------------------------------------------------- PUBLIC
-//-------------------------------------------------------- Fonctions amies
 
 //----------------------------------------------------- Méthodes publiques
 char* TrajetSimple::GetLieuDepart() const
@@ -37,29 +36,13 @@ char* TrajetSimple::GetLieuArrivee() const
 
 void TrajetSimple::Afficher() const
 {
-    cout << "TS " << iD <<" : {" << lieuDepart << " -> " << lieuArrivee << " : " << moyenTransport <<"}" << endl;
+    cout << "{" << lieuDepart << " -> " << lieuArrivee << " : " << moyenTransport <<"}" << endl;
 }
 
-
 //------------------------------------------------- Surcharge d'opérateurs
-//${file_base} & ${file_base}::operator = ( const ${file_base} & un${file_base} )
-// Algorithme :
-//
-//{
-//} //----- Fin de operator =
-
 
 //-------------------------------------------- Constructeurs - destructeur
-//${file_base}::${file_base} ( const ${file_base} & un${file_base} )
-// Algorithme :
-//
-//{
-//#ifdef MAP
-//cout << "Appel au constructeur de copie de <${file_base}>" << endl;
-//#endif
-//} //----- Fin de ${file_base} (constructeur de copie)
-
-TrajetSimple::TrajetSimple (char* unLD, char* unLA, char* unMT, int ID) : lieuDepart(unLD),
+TrajetSimple::TrajetSimple (char* unLD, char* unLA, char* unMT) : lieuDepart(unLD),
     lieuArrivee(unLA), moyenTransport(unMT)
 // Algorithme :
 //
@@ -67,8 +50,6 @@ TrajetSimple::TrajetSimple (char* unLD, char* unLA, char* unMT, int ID) : lieuDe
     #ifdef MAP
     cout << "Appel au constructeur de <${file_base}>" << endl;
     #endif
-    iD = ID;
-    type = TRAJET_SIMPLE;
 } //----- Fin de TrajetSimple
 
 
@@ -84,7 +65,6 @@ TrajetSimple::~TrajetSimple( )
     cout << "Appel au destructeur de <${file_base}>" << endl;
     #endif
 } //----- Fin de ~TrajetSimple
-
 
 //------------------------------------------------------------------ PRIVE
 

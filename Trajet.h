@@ -1,88 +1,71 @@
-//
-// Created by dntran on 9/27/2018.
-//
+/*************************************************************************
+                           Trajet  -  description
+                             -------------------
+    début                : 27/09/2018
+*************************************************************************/
 
-#ifndef TP2_HERITAGE_TRAJET_H
-#define TP2_HERITAGE_TRAJET_H
-
-
+//---------- Interface de la classe Trajet (fichier Trajet.h) ----------------
+#if ! defined (TRAJET_H)
+#define TRAJET_H
 
 //--------------------------------------------------- Interfaces utilisées
 
 //------------------------------------------------------------- Constantes
 
 //------------------------------------------------------------------ Types
-enum typeTrajet {TRAJET_SIMPLE, TRAJET_COMPOSE};
+
 //------------------------------------------------------------------------
-// Rôle de la classe <Trajet>
+// Rôle de la classe Trajet
 //
 //
 //------------------------------------------------------------------------
 
 class Trajet
 {
-//----------------------------------------------------------------- PUBLIC
+	//----------------------------------------------------------------- PUBLIC
 
-public:
-//----------------------------------------------------- Méthodes publiques
-// type Méthode ( liste de paramètres );
-// Mode d'emploi :
-//
-// Contrat :
-//
+	public:
+		//----------------------------------------------------- Méthodes publiques
+		virtual char* GetLieuDepart() const = 0;
+		// Mode d'emploi :
+		//
+		// Contrat :
+		//
+		virtual char* GetLieuArrivee() const = 0;
+		// Mode d'emploi :
+		//
+		// Contrat :
+		//
 
-    virtual char* GetLieuDepart() const = 0;
-    virtual char* GetLieuArrivee() const = 0;
+		virtual void Afficher() const = 0;
+		// Mode d'emploi :
+		//
+		// Contrat :
+		//
 
-    virtual void Afficher() const = 0;
+		//------------------------------------------------- Surcharge d'opérateurs
 
-//------------------------------------------------- Surcharge d'opérateurs
-bool operator == ( const Trajet & unTrajet ) const;
-// Mode d'emploi :
-//
-// Contrat :
-//
+		//-------------------------------------------- Constructeurs - destructeur
+	    virtual ~Trajet();
+	    // Mode d'emploi :
+	    //
+	    // Contrat :
+	    //
 
+	//------------------------------------------------------------------ PRIVE
 
-//-------------------------------------------- Constructeurs - destructeur
-//${file_base} ( const ${file_base} & un${file_base} );
-//// Mode d'emploi (constructeur de copie) :
-////
-//// Contrat :
-////
-//
-//${file_base} ( );
-//// Mode d'emploi :
-////
-//// Contrat :
-////
+	protected:
+		//----------------------------------------------------- Méthodes protégées
 
-virtual ~Trajet();
-// Mode d'emploi :
-//
-// Contrat :
-//
+		//----------------------------------------------------- Attributs protégés
 
-//------------------------------------------------------------------ PRIVE
+	private:
+		//----------------------------------------------------- Méthodes privées
 
-protected:
-//----------------------------------------------------- Méthodes protégées
-
-typeTrajet type;
-int iD;
-
-//private:
-//------------------------------------------------------- Méthodes privées
-
-
-//---------------------------------------------------------- Classes amies
-
-//-------------------------------------------------------- Classes privées
-
-//----------------------------------------------------------- Types privés
+		//----------------------------------------------------- Attributs privées
 
 };
 
-//----------------------------------------- Types dépendants de <${file_base}>
+//-------------------------------- Autres définitions dépendantes de Trajet
 
-#endif //TP2_HERITAGE_TRAJET_H
+#endif // TRAJET_H

@@ -1,5 +1,10 @@
+/*************************************************************************
+                           TrajetCompose  -  description
+                             -------------------
+    début                : 27/09/2018
+*************************************************************************/
 
-//---------- Réalisation de la classe <${file_base}> (fichier ${file_name}) --
+//---------- Réalisation de la classe TrajetCompose (fichier TrajetCompose.cpp) ------------
 
 //---------------------------------------------------------------- INCLUDE
 
@@ -13,14 +18,7 @@ using namespace std;
 
 //------------------------------------------------------------- Constantes
 
-//---------------------------------------------------- Variables de classe
-
-//----------------------------------------------------------- Types privés
-
-
 //----------------------------------------------------------------- PUBLIC
-
-//-------------------------------------------------------- Fonctions amies
 
 //----------------------------------------------------- Méthodes publiques
 int TrajetCompose::AjouterTrajet(Trajet *trajet)
@@ -29,10 +27,9 @@ int TrajetCompose::AjouterTrajet(Trajet *trajet)
 {
     if (nbTrajetsCourant < nbTrajetsMax)
     {
-        if (VerifierContrainte(*trajet)) // contrainte vérifiée
+        if (VerifierContrainte(*trajet))
         {
-            tableauTrajets[nbTrajetsCourant] = trajet;
-            nbTrajetsCourant++;
+            tableauTrajets[nbTrajetsCourant++] = trajet;
             return AJOUTE;
         }
 
@@ -58,7 +55,6 @@ char* TrajetCompose::GetLieuArrivee() const
 
 void TrajetCompose::Afficher() const
 {
-    cout << "TC " << iD << " : ";
     cout << "{" << endl;
     for (int curseur = 0; curseur < nbTrajetsCourant; curseur++)
     {
@@ -68,29 +64,21 @@ void TrajetCompose::Afficher() const
     cout << "}" << endl;
 }
 
-
 //------------------------------------------------- Surcharge d'opérateurs
-//${file_base} & ${file_base}::operator = ( const ${file_base} & un${file_base} )
-// Algorithme :
-//
-//{
-//} //----- Fin de operator =
-
 
 //-------------------------------------------- Constructeurs - destructeur
-TrajetCompose::TrajetCompose(unsigned int nbTrajetsM, int ID)
+TrajetCompose::TrajetCompose(unsigned int nbTrajetsM)
 // Algorithme :
 //
 {
     #ifdef MAP
     cout << "Appel au constructeur de <${file_base}>" << endl;
     #endif
-    iD = ID;
-    type = TRAJET_COMPOSE;
+
     tableauTrajets = new Trajet*[nbTrajetsM];
     nbTrajetsMax = nbTrajetsM;
     nbTrajetsCourant = 0;
-}
+} //----- Fin de TrajetCompose
 
 
 TrajetCompose::~TrajetCompose()
@@ -107,8 +95,7 @@ TrajetCompose::~TrajetCompose()
     }
 
     delete [] tableauTrajets;
-} //----- Fin de ~${file_base}
-
+} //----- Fin de ~TrajetCompose
 
 //------------------------------------------------------------------ PRIVE
 

@@ -1,106 +1,92 @@
-//
-// Created by dntran on 9/27/2018.
-//
+/*************************************************************************
+                           TrajetCompose  -  description
+                             -------------------
+    début                : 27/09/2018
+*************************************************************************/
 
-#ifndef TP2_HERITAGE_TRAJETCOMPOSE_H
-#define TP2_HERITAGE_TRAJETCOMPOSE_H
-
+//---------- Interface de la classe TrajetCompose (fichier TrajetCompose.h) ----------------
+#if ! defined (TRAJETCOMPOSE_H)
+#define TRAJETCOMPOSE_H
 
 //--------------------------------------------------- Interfaces utilisées
 #include "Trajet.h"
 
 //------------------------------------------------------------- Constantes
-const int TAILLE_MAXIMALE_DEFAUT = 5;
+const int NOMBRE_TRAJETS_MAX_DEFAUT = 3;
 
 //------------------------------------------------------------------ Types
-enum CODE_RETOUR_AJOUT {PLEIN, CONTRAINTE_NON_VERIFIEE, AJOUTE, EXISTE_DEJA};
+enum CODE_RETOUR_AJOUT {PLEIN, CONTRAINTE_NON_VERIFIEE, AJOUTE};
 
 //------------------------------------------------------------------------
-// Rôle de la classe <${file_base}>
+// Rôle de la classe TrajetCompose
 //
 //
 //------------------------------------------------------------------------
 
 class TrajetCompose : public Trajet
 {
-    //----------------------------------------------------------------- PUBLIC
+	//----------------------------------------------------------------- PUBLIC
 
-    public:
-    //----------------------------------------------------- Méthodes publiques
-    int AjouterTrajet(Trajet *trajet);
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
+	public:
+		//----------------------------------------------------- Méthodes publiques
+		int AjouterTrajet(Trajet *trajet);
+	    // Mode d'emploi :
+	    //
+	    // Contrat :
+	    //
 
-    virtual char* GetLieuDepart() const;
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
+	    virtual char* GetLieuDepart() const;
+	    // Mode d'emploi :
+	    //
+	    // Contrat :
+	    //
 
-    virtual char* GetLieuArrivee() const;
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
+	    virtual char* GetLieuArrivee() const;
+	    // Mode d'emploi :
+	    //
+	    // Contrat :
+	    //
 
-    virtual void Afficher() const;
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
+	    virtual void Afficher() const;
+	    // Mode d'emploi :
+	    //
+	    // Contrat :
+	    //
 
+		//------------------------------------------------- Surcharge d'opérateurs
 
-    //------------------------------------------------- Surcharge d'opérateurs
-    //${file_base} & operator = ( const ${file_base} & un${file_base} );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
+		//-------------------------------------------- Constructeurs - destructeur
+		TrajetCompose(unsigned int nbTrajetsM = NOMBRE_TRAJETS_MAX_DEFAUT);
+	    // Mode d'emploi :
+	    //
+	    // Contrat :
+	    //
 
+	    virtual ~TrajetCompose();
+	    // Mode d'emploi :
+	    //
+	    // Contrat :
+	    //
 
-    //-------------------------------------------- Constructeurs - destructeur
+	//------------------------------------------------------------------ PRIVE
 
-    TrajetCompose(unsigned int nbTrajetsM = TAILLE_MAXIMALE_DEFAUT, int ID = -1);
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
+	protected:
+		//----------------------------------------------------- Méthodes protégées
 
-    virtual ~TrajetCompose();
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
+		//----------------------------------------------------- Attributs protégés
 
-    //------------------------------------------------------------------ PRIVE
+	private:
+		//----------------------------------------------------- Méthodes privées
+		bool VerifierContrainte(const Trajet & trajet) const;
 
-    protected:
-    //----------------------------------------------------- Méthodes protégées
+		//----------------------------------------------------- Attributs privées
+		int nbTrajetsCourant;
 
-    //----------------------------------------------------- Attributs protégés
+		int nbTrajetsMax;
 
-    private:
-    //------------------------------------------------------- Méthodes privées
-    bool VerifierContrainte(const Trajet & trajet) const;
-
-    //------------------------------------------------------- Attributs privés
-    int nbTrajetsCourant;
-
-    int nbTrajetsMax;
-
-    Trajet** tableauTrajets;
-
-    //---------------------------------------------------------- Classes amies
-
-    //-------------------------------------------------------- Classes privées
-
-    //----------------------------------------------------------- Types privés
-
+		Trajet** tableauTrajets;
 };
 
-//----------------------------------------- Types dépendants de <${file_base}>
+//-------------------------------- Autres définitions dépendantes de TrajetCompose
 
-
-#endif //TP2_HERITAGE_TRAJETCOMPOSE_H
+#endif // TRAJETCOMPOSE_H
