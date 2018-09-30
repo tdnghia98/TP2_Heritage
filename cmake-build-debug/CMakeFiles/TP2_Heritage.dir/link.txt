@@ -1,1 +1,0 @@
-/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/TP2_Heritage.dir/main.cpp.o CMakeFiles/TP2_Heritage.dir/Catalogue.cpp.o CMakeFiles/TP2_Heritage.dir/Trajet.cpp.o CMakeFiles/TP2_Heritage.dir/TrajetSimple.cpp.o CMakeFiles/TP2_Heritage.dir/TrajetCompose.cpp.o  -o TP2_Heritage.exe -Wl,--out-implib,libTP2_Heritage.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

@@ -1,81 +1,77 @@
-//
-// Created by dntran on 9/27/2018.
-//
+/*************************************************************************
+                           Catalogue  -  description
+                             -------------------
+    début                : 27/09/2018
+*************************************************************************/
 
-#ifndef TP2_HERITAGE_CATALOGUE_H
-#define TP2_HERITAGE_CATALOGUE_H
-
+//---------- Interface de la classe Catalogue (fichier Catalogue.h) ----------------
+#if ! defined (CATALOGUE_H)
+#define CATALOGUE_H
 
 //--------------------------------------------------- Interfaces utilisées
 #include "Trajet.h"
-#include "TrajetSimple.h"
-#include "TrajetCompose.h"
+
 //------------------------------------------------------------- Constantes
 
 //------------------------------------------------------------------ Types
 
 //------------------------------------------------------------------------
-// Rôle de la classe <Catalogue>
-// Cette classe contient les Trajets sous forme d'un tableau de Trajet
-// Elle permet de stocker et faire des recherches de trajet
+// Rôle de la classe Catalogue
+//
+//
 //------------------------------------------------------------------------
 
 class Catalogue
 {
-//----------------------------------------------------------------- PUBLIC
+	//----------------------------------------------------------------- PUBLIC
 
-public:
-//----------------------------------------------------- Méthodes publiques
+	public:
+		//----------------------------------------------------- Méthodes publiques
+	    void Afficher()
+	    // Mode d'emploi :
+	    //
+	    // Contrat :
+	    //
 
-void Afficher();
-int ajouterTrajet(Trajet * trajet);
-////------------------------------------------------- Surcharge d'opérateurs
-//${file_base} & operator = ( const ${file_base} & un${file_base} );
-//// Mode d'emploi :
-////
-//// Contrat :
-////
-//
+		int AjouterTrajet(Trajet *trajet);
+		// Mode d'emploi :
+	    //
+	    // Contrat :
+	    //
 
-//-------------------------------------------- Constructeurs - destructeur
-Catalogue(int nbTMax);
-// Mode d'emploi () :
-//
-// Contrat :
-//
+		//------------------------------------------------- Surcharge d'opérateurs
 
-virtual ~Catalogue();
-// Mode d'emploi :
-//
-// Contrat :
-//
+		//-------------------------------------------- Constructeurs - destructeur
+		Catalogue(int nbTrajetsM = NOMBRE_TRAJETS_MAX_DEFAUT);
+		// Mode d'emploi () :
+		//
+		// Contrat :
+		//
 
-//------------------------------------------------------------------ PRIVE
+		virtual ~Catalogue();
+		// Mode d'emploi :
+		//
+		// Contrat :
+		//
 
-protected:
-//----------------------------------------------------- Méthodes protégées
+	//------------------------------------------------------------------ PRIVE
 
-private:
-//------------------------------------------------------- Méthodes privées
+	protected:
+		//----------------------------------------------------- Méthodes protégées
 
-protected:
-//----------------------------------------------------- Attributs protégés
-Trajet** tableauTrajet; // Tableau de trajet
-int nbTrajetMax;
-int nbTrajetActuel;
+		//----------------------------------------------------- Attributs protégés
 
-private:
-//------------------------------------------------------- Methodes privés
-bool Exist(Trajet & unTrajet) const;
-//---------------------------------------------------------- Classes amies
+	private:
+		//----------------------------------------------------- Méthodes privées
 
-//-------------------------------------------------------- Classes privées
+		//----------------------------------------------------- Attributs privées
+		int nbTrajetsCourant;
 
-//----------------------------------------------------------- Types privés
+		int nbTrajetsMax;
 
+		Trajet** tableauTrajets;
 };
 
-//----------------------------------------- Types dépendants de <${file_base}>
+//-------------------------------- Autres définitions dépendantes de Catalogue
 
-
-#endif //TP2_HERITAGE_CATALOGUE_H
+#endif // CATALOGUE_H

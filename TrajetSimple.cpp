@@ -48,7 +48,7 @@ TrajetSimple::TrajetSimple (char* unLD, char* unLA, char* unMT) : lieuDepart(unL
 //
 {
     #ifdef MAP
-    cout << "Appel au constructeur de <${file_base}>" << endl;
+    cout << "Appel au constructeur de TrajetSimple" << endl;
     #endif
 } //----- Fin de TrajetSimple
 
@@ -62,7 +62,7 @@ TrajetSimple::~TrajetSimple( )
     delete [] moyenTransport;
 
     #ifdef MAP
-    cout << "Appel au destructeur de <${file_base}>" << endl;
+    cout << "Appel au destructeur de TrajetSimple" << endl;
     #endif
 } //----- Fin de ~TrajetSimple
 

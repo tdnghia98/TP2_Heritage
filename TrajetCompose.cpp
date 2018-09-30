@@ -72,7 +72,7 @@ TrajetCompose::TrajetCompose(unsigned int nbTrajetsM)
 //
 {
     #ifdef MAP
-    cout << "Appel au constructeur de <${file_base}>" << endl;
+    cout << "Appel au constructeur de TrajetCompose" << endl;
     #endif
 
     tableauTrajets = new Trajet*[nbTrajetsM];
@@ -86,7 +86,7 @@ TrajetCompose::~TrajetCompose()
 //
 {
     #ifdef MAP
-    cout << "Appel au destructeur de <${file_base}>" << endl;
+    cout << "Appel au destructeur de TrajetCompose" << endl;
     #endif
 
     for (int curseur = 0; curseur < nbTrajetsCourant; curseur++)
