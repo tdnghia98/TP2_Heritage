@@ -29,6 +29,7 @@ public:
 
 void Afficher();
 int ajouterTrajet(Trajet * trajet);
+void rechercheTrajet();
 ////------------------------------------------------- Surcharge d'opérateurs
 //${file_base} & operator = ( const ${file_base} & un${file_base} );
 //// Mode d'emploi :

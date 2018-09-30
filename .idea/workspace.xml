@@ -14,7 +14,7 @@
     <list default="true" id="75913401-e593-4d90-8112-3bbec2d8bcc7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Catalogue.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Catalogue.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrajetCompose.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TrajetCompose.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Catalogue.h" beforeDir="false" afterPath="$PROJECT_DIR$/Catalogue.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -41,17 +41,18 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="753" />
-          <entry key="h" value="655" />
-          <entry key="txt" value="213" />
+          <entry key="cpp" value="1327" />
+          <entry key="h" value="703" />
+          <entry key="txt" value="772" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.cidr.testingFrameworks.usages" />
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="TP2_Heritage (disassembly)" value="1" />
           <entry key="cc" value="5" />
-          <entry key="cpp" value="16" />
-          <entry key="h" value="15" />
+          <entry key="cpp" value="18" />
+          <entry key="h" value="16" />
           <entry key="makefile" value="1" />
           <entry key="txt" value="1" />
         </counts>
@@ -59,14 +60,15 @@
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="1408" />
-          <entry key="PLAIN_TEXT" value="213" />
+          <entry key="ObjectiveC" value="2030" />
+          <entry key="PLAIN_TEXT" value="772" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CMakeLists.txt" value="1" />
-          <entry key="ObjectiveC" value="36" />
+          <entry key="Disassembly" value="1" />
+          <entry key="ObjectiveC" value="39" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -77,38 +79,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Trajet.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
+            <state relative-caret-position="95">
               <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Trajet.h">
+        <entry file="file://$PROJECT_DIR$/TrajetSimple.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TrajetCompose.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
-              <folding>
-                <element signature="e#253#272#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TrajetCompose.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1190">
-              <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
+            <state relative-caret-position="153">
+              <caret line="39" column="19" lean-forward="true" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -116,8 +97,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="243">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -125,20 +106,26 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Catalogue.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
+            <state relative-caret-position="140">
+              <caret line="42" column="23" lean-forward="true" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
+              <folding>
+                <element signature="e#349#371#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Cygwin/usr/src/debug/cygwin-2.11.1-1/winsup/cygwin/libstdcxx_wrapper.cc">
+        <entry file="file://$PROJECT_DIR$/Catalogue.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="54" selection-start-line="54" selection-end-line="54" />
+            <state relative-caret-position="242">
+              <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+              <folding>
+                <element signature="e#185#204#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -171,10 +158,10 @@
         <option value="$PROJECT_DIR$/TrajetCompose.h" />
         <option value="$PROJECT_DIR$/TrajetSimple.cpp" />
         <option value="$PROJECT_DIR$/Trajet.cpp" />
+        <option value="$PROJECT_DIR$/TrajetCompose.cpp" />
         <option value="$PROJECT_DIR$/Catalogue.h" />
         <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/Catalogue.cpp" />
-        <option value="$PROJECT_DIR$/TrajetCompose.cpp" />
       </list>
     </option>
   </component>
@@ -255,7 +242,7 @@
       <updated>1538028155507</updated>
       <workItem from="1538028167385" duration="4771000" />
       <workItem from="1538316197089" duration="6324000" />
-      <workItem from="1538335732463" duration="710000" />
+      <workItem from="1538335732463" duration="5015000" />
     </task>
     <task id="LOCAL-00001" summary="First Attempt">
       <created>1538034359643</created>
@@ -320,11 +307,18 @@
       <option name="project" value="LOCAL" />
       <updated>1538322418569</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="- Ligne 62 - Catalogue.cpp&#10;Fixed bug initializing tableauTrajet: Should not initialize this array by directly adding Objects of type Trajet. This gives an error because the array of pointer has all its pointers uninitialized so this caused a SIGSEGV which is a memory outbound error. In this case, we tried to assign NULL pointers (which are not initialized in the tableauTrajet of type Trajet**) to an object. The issue is fixed by assigning pointers in the tableauTrajet to a pointer pointing to a Trajet object.&#10;&#10;- Printing method for the catalog is done">
+      <created>1538336751367</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1538336751367</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12852000" />
+    <option name="totallyTimeSpent" value="17157000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -335,7 +329,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986577" weight="0.32960895" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4986577" visible="true" weight="0.32960895" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39944133" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -345,7 +339,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4986577" weight="0.3282123" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50201344" side_tool="true" weight="0.32960895" />
       <window_info anchor="bottom" id="CMake" order="11" sideWeight="0.49932885" weight="0.3282123" />
-      <window_info active="true" anchor="bottom" id="Messages" order="12" sideWeight="0.49798658" visible="true" weight="0.32960895" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49798658" weight="0.32960895" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -391,30 +385,21 @@
     </ignored-roots>
     <MESSAGE value="First Attempt" />
     <MESSAGE value="Ligne 62 - Catalogue.cpp&#10;Bug initializing tableauTrajet: Using the Debugger, breakpoint at Catalogue c(3) in main.cpp gives the error.&#10;Array is given NULL Pointer (use debugger to see)." />
-    <option name="LAST_COMMIT_MESSAGE" value="Ligne 62 - Catalogue.cpp&#10;Bug initializing tableauTrajet: Using the Debugger, breakpoint at Catalogue c(3) in main.cpp gives the error.&#10;Array is given NULL Pointer (use debugger to see)." />
+    <MESSAGE value="- Ligne 62 - Catalogue.cpp&#10;Fixed bug initializing tableauTrajet: Should not initialize this array by directly adding Objects of type Trajet. This gives an error because the array of pointer has all its pointers uninitialized so this caused a SIGSEGV which is a memory outbound error. In this case, we tried to assign NULL pointers (which are not initialized in the tableauTrajet of type Trajet**) to an object. The issue is fixed by assigning pointers in the tableauTrajet to a pointer pointing to a Trajet object.&#10;&#10;- Printing method for the catalog is done" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Ligne 62 - Catalogue.cpp&#10;Fixed bug initializing tableauTrajet: Should not initialize this array by directly adding Objects of type Trajet. This gives an error because the array of pointer has all its pointers uninitialized so this caused a SIGSEGV which is a memory outbound error. In this case, we tried to assign NULL pointers (which are not initialized in the tableauTrajet of type Trajet**) to an object. The issue is fixed by assigning pointers in the tableauTrajet to a pointer pointing to a Trajet object.&#10;&#10;- Printing method for the catalog is done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>31</line>
-          <option name="timeStamp" value="13" />
+          <url>file://$PROJECT_DIR$/Catalogue.cpp</url>
+          <line>45</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>32</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>33</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>30</line>
-          <option name="timeStamp" value="17" />
+          <url>file://$PROJECT_DIR$/Catalogue.cpp</url>
+          <line>47</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -428,13 +413,6 @@
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/TrajetSimple.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="39" column="19" lean-forward="true" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Cygwin/usr/include/w32api/vfw.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -446,13 +424,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
           <caret line="60" column="80" selection-start-line="60" selection-start-column="80" selection-end-line="60" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Trajet.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -470,20 +441,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Catalogue.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <element signature="e#185#204#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Cygwin/usr/src/debug/cygwin-2.11.1-1/winsup/cygwin/libstdcxx_wrapper.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
           <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TrajetCompose.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-629">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TrajetCompose.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-642">
+          <caret line="64" column="21" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
+          <folding>
+            <element signature="e#253#272#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -494,36 +472,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Catalogue.cpp">
+    <entry file="file://$PROJECT_DIR$/Trajet.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="85" column="24" lean-forward="true" selection-start-line="85" selection-start-column="24" selection-end-line="85" selection-end-column="24" />
+        <state relative-caret-position="95">
+          <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TrajetCompose.h">
+    <entry file="file://$PROJECT_DIR$/TrajetSimple.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1190">
-          <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
+        <state relative-caret-position="153">
+          <caret line="39" column="19" lean-forward="true" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Catalogue.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+          <folding>
+            <element signature="e#185#204#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="243">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TrajetCompose.cpp">
+    <entry file="file://$PROJECT_DIR$/Catalogue.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="64" column="21" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
+        <state relative-caret-position="140">
+          <caret line="42" column="23" lean-forward="true" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
           <folding>
-            <element signature="e#253#272#0" expanded="true" />
+            <element signature="e#349#371#0" expanded="true" />
           </folding>
         </state>
       </provider>

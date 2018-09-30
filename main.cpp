@@ -34,5 +34,6 @@ int main() {
     c->ajouterTrajet(TS2);
     c->ajouterTrajet(TC1);
     c->Afficher();
+    c->rechercheTrajet();
     return 0;
 }

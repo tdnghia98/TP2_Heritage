@@ -9,7 +9,7 @@ using namespace std;
 
 //------------------------------------------------------ Include personnel
 #include "Catalogue.h"
-
+#include <cstring>
 //------------------------------------------------------------- Constantes
 
 //---------------------------------------------------- Variables de classe
@@ -35,6 +35,28 @@ void Catalogue::Afficher() {
         (*tableauTrajet[i]).Afficher();
     }
     cout << "}" <<endl;
+}
+
+void Catalogue::rechercheTrajet() {
+    bool trouveTrajets = false;
+    char* lD;
+    lD = new char[100];
+    char* lA = new char[100];
+    cout << "Lieu de depart : ";
+    cin >> lD;
+    cout << "Lieu d'arrive : ";
+    cin >> lA;
+    cout << "Les trajets possibles pour aller de " << lD << " a " << lA << " sont: \n";
+    for (int i = 0; i < nbTrajetActuel; i++) {
+        if (strcmp(tableauTrajet[i]->GetLieuDepart(), lD) == 0 && strcmp(tableauTrajet[i]->GetLieuArrivee(), lA) == 0) {
+            cout << "- ";
+            tableauTrajet[i] ->Afficher();
+            trouveTrajets = true;
+        }
+    }
+    if (!trouveTrajets) {
+        cout << "Pas de trajet possible";
+    }
 }
 
 int Catalogue::ajouterTrajet(Trajet * trajet) {
