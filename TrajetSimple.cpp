@@ -37,7 +37,7 @@ char* TrajetSimple::GetLieuArrivee() const
 
 void TrajetSimple::Afficher() const
 {
-    cout << "{" << lieuDepart << " -> " << lieuArrivee << " : " << moyenTransport <<"}" << endl;
+    cout << "TS " << iD <<" : {" << lieuDepart << " -> " << lieuArrivee << " : " << moyenTransport <<"}" << endl;
 }
 
 
@@ -59,7 +59,7 @@ void TrajetSimple::Afficher() const
 //#endif
 //} //----- Fin de ${file_base} (constructeur de copie)
 
-TrajetSimple::TrajetSimple (char* unLD, char* unLA, char* unMT) : lieuDepart(unLD),
+TrajetSimple::TrajetSimple (char* unLD, char* unLA, char* unMT, int ID) : lieuDepart(unLD),
     lieuArrivee(unLA), moyenTransport(unMT)
 // Algorithme :
 //
@@ -67,6 +67,8 @@ TrajetSimple::TrajetSimple (char* unLD, char* unLA, char* unMT) : lieuDepart(unL
     #ifdef MAP
     cout << "Appel au constructeur de <${file_base}>" << endl;
     #endif
+    iD = ID;
+    type = TRAJET_SIMPLE;
 } //----- Fin de TrajetSimple
 
 

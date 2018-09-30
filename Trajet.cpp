@@ -1,5 +1,5 @@
 
-//---------- Réalisation de la classe <${file_base}> (fichier ${file_name}) --
+//---------- Réalisation de la classe Trajet --
 
 //---------------------------------------------------------------- INCLUDE
 
@@ -56,6 +56,9 @@ using namespace std;
 //#endif
 //} //----- Fin de ${file_base}
 
+bool Trajet::operator == (const Trajet & unTrajet) const {
+    return ((iD == unTrajet.iD) && (type == unTrajet.type));
+}
 
 Trajet::~Trajet( )
 // Algorithme :

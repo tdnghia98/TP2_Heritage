@@ -8,6 +8,8 @@
 
 //--------------------------------------------------- Interfaces utilisées
 #include "Trajet.h"
+#include "TrajetSimple.h"
+#include "TrajetCompose.h"
 //------------------------------------------------------------- Constantes
 
 //------------------------------------------------------------------ Types
@@ -24,8 +26,9 @@ class Catalogue
 
 public:
 //----------------------------------------------------- Méthodes publiques
-void Afficher();
 
+void Afficher();
+int ajouterTrajet(Trajet * trajet);
 ////------------------------------------------------- Surcharge d'opérateurs
 //${file_base} & operator = ( const ${file_base} & un${file_base} );
 //// Mode d'emploi :
@@ -62,8 +65,8 @@ int nbTrajetMax;
 int nbTrajetActuel;
 
 private:
-//------------------------------------------------------- Attributs privés
-
+//------------------------------------------------------- Methodes privés
+bool Exist(Trajet & unTrajet) const;
 //---------------------------------------------------------- Classes amies
 
 //-------------------------------------------------------- Classes privées

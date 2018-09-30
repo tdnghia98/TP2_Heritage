@@ -20,22 +20,36 @@ using namespace std;
 //----------------------------------------------------------------- PUBLIC
 //-------------------------------------------------------- Fonctions amies
 
-//----------------------------------------------------- Méthodes publiques
-void Catalogue::Afficher() {
-    cout << "Affichage du tableau de Trajet: ";
-    for (int i = 0; i < nbTrajetActuel; i++) {
-        (*tableauTrajet[i]).Afficher();
-    }
-    cout << endl;
-}
-
-
 ////------------------------------------------------- Surcharge d'opérateurs
 //${file_base} & ${file_base}::operator = ( const ${file_base} & un${file_base} )
 //// Algorithme :
 ////
 //{
 //} //----- Fin de operator =
+
+//----------------------------------------------------- Méthodes publiques
+void Catalogue::Afficher() {
+    cout << "Affichage du catalogue de Trajet: {\n";
+    for (int i = 0; i < nbTrajetActuel; i++) {
+        cout << "\t";
+        (*tableauTrajet[i]).Afficher();
+    }
+    cout << endl;
+}
+
+int Catalogue::ajouterTrajet(Trajet * trajet) {
+    if (nbTrajetActuel < nbTrajetMax) {
+        if (!Exist(*trajet)) {
+            *tableauTrajet[nbTrajetActuel] = *trajet;
+            nbTrajetActuel++;
+            return AJOUTE;
+        } else {
+            return EXISTE_DEJA;
+        }
+    }
+    return PLEIN;
+}
+
 
 
 //-------------------------------------------- Constructeurs - destructeur
@@ -66,5 +80,12 @@ cout << "Appel au destructeur de <${file_base}>" << endl;
 //------------------------------------------------------------------ PRIVE
 
 //----------------------------------------------------- Méthodes protégées
-
+bool Catalogue::Exist(Trajet &unTrajet) const {
+    for(int curseur = 0; curseur < nbTrajetActuel; curseur++) {
+        if (*tableauTrajet[curseur] == unTrajet) {
+            return true;
+        }
+    }
+    return false;
+}
 //------------------------------------------------------- Méthodes privées

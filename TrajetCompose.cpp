@@ -58,6 +58,7 @@ char* TrajetCompose::GetLieuArrivee() const
 
 void TrajetCompose::Afficher() const
 {
+    cout << "TC " << iD << " : ";
     cout << "{" << endl;
     for (int curseur = 0; curseur < nbTrajetsCourant; curseur++)
     {
@@ -77,14 +78,15 @@ void TrajetCompose::Afficher() const
 
 
 //-------------------------------------------- Constructeurs - destructeur
-TrajetCompose::TrajetCompose(unsigned int nbTrajetsM)
+TrajetCompose::TrajetCompose(unsigned int nbTrajetsM, int ID)
 // Algorithme :
 //
 {
     #ifdef MAP
     cout << "Appel au constructeur de <${file_base}>" << endl;
     #endif
-
+    iD = ID;
+    type = TRAJET_COMPOSE;
     tableauTrajets = new Trajet*[nbTrajetsM];
     nbTrajetsMax = nbTrajetsM;
     nbTrajetsCourant = 0;

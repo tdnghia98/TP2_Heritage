@@ -58,7 +58,7 @@ virtual void Afficher() const;
 // Contrat :
 //
 
-TrajetSimple (char* LieuDepart, char* LieuArrivee, char* MoyenTransport);
+TrajetSimple (char* LieuDepart, char* LieuArrivee, char* MoyenTransport, int ID);
 // Mode d'emploi :
 //
 // Contrat :
@@ -84,6 +84,8 @@ char* lieuDepart;
 char* lieuArrivee;
 
 char* moyenTransport;
+
+
 
 //------------------------------------------------------- Méthodes privées
 

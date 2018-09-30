@@ -13,7 +13,7 @@
 const int TAILLE_MAXIMALE_DEFAUT = 5;
 
 //------------------------------------------------------------------ Types
-enum CODE_RETOUR_AJOUT {PLEIN, CONTRAINTE_NON_VERIFIEE, AJOUTE};
+enum CODE_RETOUR_AJOUT {PLEIN, CONTRAINTE_NON_VERIFIEE, AJOUTE, EXISTE_DEJA};
 
 //------------------------------------------------------------------------
 // Rôle de la classe <${file_base}>
@@ -62,7 +62,7 @@ class TrajetCompose : public Trajet
 
     //-------------------------------------------- Constructeurs - destructeur
 
-    TrajetCompose(unsigned int nbTrajetsM = TAILLE_MAXIMALE_DEFAUT);
+    TrajetCompose(unsigned int nbTrajetsM = TAILLE_MAXIMALE_DEFAUT, int ID = -1);
     // Mode d'emploi :
     //
     // Contrat :

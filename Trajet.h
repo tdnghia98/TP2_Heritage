@@ -6,12 +6,13 @@
 #define TP2_HERITAGE_TRAJET_H
 
 
+
 //--------------------------------------------------- Interfaces utilisées
 
 //------------------------------------------------------------- Constantes
 
 //------------------------------------------------------------------ Types
-
+enum typeTrajet {TRAJET_SIMPLE, TRAJET_COMPOSE};
 //------------------------------------------------------------------------
 // Rôle de la classe <Trajet>
 //
@@ -36,7 +37,7 @@ public:
     virtual void Afficher() const = 0;
 
 //------------------------------------------------- Surcharge d'opérateurs
-// ${file_base} & operator = ( const ${file_base} & un${file_base} );
+bool operator == ( const Trajet & unTrajet ) const;
 // Mode d'emploi :
 //
 // Contrat :
@@ -64,11 +65,15 @@ virtual ~Trajet();
 
 //------------------------------------------------------------------ PRIVE
 
-//protected:
+protected:
 //----------------------------------------------------- Méthodes protégées
+
+typeTrajet type;
+int iD;
 
 //private:
 //------------------------------------------------------- Méthodes privées
+
 
 //---------------------------------------------------------- Classes amies
 
