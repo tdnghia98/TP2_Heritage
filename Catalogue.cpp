@@ -24,7 +24,7 @@ using namespace std;
 void Catalogue::Afficher() {
     cout << "Affichage du tableau de Trajet: ";
     for (int i = 0; i < nbTrajetActuel; i++) {
-        tableauTrajet[i].Afficher();
+        (*tableauTrajet[i]).Afficher();
     }
     cout << endl;
 }

@@ -29,35 +29,35 @@ using namespace std;
 
 
 //------------------------------------------------- Surcharge d'opérateurs
-${file_base} & ${file_base}::operator = ( const ${file_base} & un${file_base} )
+//${file_base} & ${file_base}::operator = ( const ${file_base} & un${file_base} )
 // Algorithme :
 //
-{
-} //----- Fin de operator =
+//{
+//} //----- Fin de operator =
 
 
 //-------------------------------------------- Constructeurs - destructeur
-${file_base}::${file_base} ( const ${file_base} & un${file_base} )
+//${file_base}::${file_base} ( const ${file_base} & un${file_base} )
 // Algorithme :
 //
-{
-#ifdef MAP
-cout << "Appel au constructeur de copie de <${file_base}>" << endl;
-#endif
-} //----- Fin de ${file_base} (constructeur de copie)
+//{
+//#ifdef MAP
+//cout << "Appel au constructeur de copie de <${file_base}>" << endl;
+//#endif
+//} //----- Fin de ${file_base} (constructeur de copie)
 
 
-${file_base}::${file_base} ( )
+//${file_base}::${file_base} ( )
 // Algorithme :
 //
-{
-#ifdef MAP
-cout << "Appel au constructeur de <${file_base}>" << endl;
-#endif
-} //----- Fin de ${file_base}
+//{
+//#ifdef MAP
+//cout << "Appel au constructeur de <${file_base}>" << endl;
+//#endif
+//} //----- Fin de ${file_base}
 
 
-${file_base}::~${file_base} ( )
+Trajet::~Trajet( )
 // Algorithme :
 //
 {

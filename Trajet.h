@@ -55,12 +55,12 @@ public:
 ////
 //// Contrat :
 ////
+
+virtual ~Trajet();
+// Mode d'emploi :
 //
-//virtual ~${file_base} ( );
-//// Mode d'emploi :
-////
-//// Contrat :
-////
+// Contrat :
+//
 
 //------------------------------------------------------------------ PRIVE
 

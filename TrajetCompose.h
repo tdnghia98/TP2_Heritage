@@ -7,10 +7,13 @@
 
 
 //--------------------------------------------------- Interfaces utilisées
+#include "Trajet.h"
 
 //------------------------------------------------------------- Constantes
+const int TAILLE_MAXIMALE_DEFAUT = 5;
 
 //------------------------------------------------------------------ Types
+enum CODE_RETOUR_AJOUT {PLEIN, CONTRAINTE_NON_VERIFIEE, AJOUTE};
 
 //------------------------------------------------------------------------
 // Rôle de la classe <${file_base}>
@@ -18,65 +21,82 @@
 //
 //------------------------------------------------------------------------
 
-class ${file_base} : public Ancetre
+class TrajetCompose : public Trajet
 {
-//----------------------------------------------------------------- PUBLIC
+    //----------------------------------------------------------------- PUBLIC
 
-public:
-//----------------------------------------------------- Méthodes publiques
-// type Méthode ( liste de paramètres );
-// Mode d'emploi :
-//
-// Contrat :
-//
+    public:
+    //----------------------------------------------------- Méthodes publiques
+    int AjouterTrajet(Trajet *trajet);
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
+
+    virtual char* GetLieuDepart() const;
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
+
+    virtual char* GetLieuArrivee() const;
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
+
+    virtual void Afficher() const;
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
 
 
-//------------------------------------------------- Surcharge d'opérateurs
-${file_base} & operator = ( const ${file_base} & un${file_base} );
-// Mode d'emploi :
-//
-// Contrat :
-//
+    //------------------------------------------------- Surcharge d'opérateurs
+    //${file_base} & operator = ( const ${file_base} & un${file_base} );
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
 
 
-//-------------------------------------------- Constructeurs - destructeur
-${file_base} ( const ${file_base} & un${file_base} );
-// Mode d'emploi (constructeur de copie) :
-//
-// Contrat :
-//
+    //-------------------------------------------- Constructeurs - destructeur
 
-${file_base} ( );
-// Mode d'emploi :
-//
-// Contrat :
-//
+    TrajetCompose(unsigned int nbTrajetsM = TAILLE_MAXIMALE_DEFAUT);
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
 
-virtual ~${file_base} ( );
-// Mode d'emploi :
-//
-// Contrat :
-//
+    virtual ~TrajetCompose();
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
 
-//------------------------------------------------------------------ PRIVE
+    //------------------------------------------------------------------ PRIVE
 
-protected:
-//----------------------------------------------------- Méthodes protégées
+    protected:
+    //----------------------------------------------------- Méthodes protégées
 
-private:
-//------------------------------------------------------- Méthodes privées
+    //----------------------------------------------------- Attributs protégés
 
-protected:
-//----------------------------------------------------- Attributs protégés
+    private:
+    //------------------------------------------------------- Méthodes privées
+    bool VerifierContrainte(const Trajet & trajet) const;
 
-private:
-//------------------------------------------------------- Attributs privés
+    //------------------------------------------------------- Attributs privés
+    int nbTrajetsCourant;
 
-//---------------------------------------------------------- Classes amies
+    int nbTrajetsMax;
 
-//-------------------------------------------------------- Classes privées
+    Trajet** tableauTrajets;
 
-//----------------------------------------------------------- Types privés
+    //---------------------------------------------------------- Classes amies
+
+    //-------------------------------------------------------- Classes privées
+
+    //----------------------------------------------------------- Types privés
 
 };
 

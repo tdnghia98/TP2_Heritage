@@ -1,6 +1,31 @@
 #include <iostream>
+#include "TrajetSimple.h"
+#include "TrajetCompose.h"
+using namespace std;
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+
+    // TRAJETS SIMPLE
+    char departTS1[] = "Lyon", arriveeTS1[] = "Bordeaux", transportTS1[] = "Train";
+    char departTS2[] = "Lyon", arriveeTS2[] = "Paris", transportTS2[] = "Auto";
+
+    TrajetSimple *TS1 = new TrajetSimple(departTS1, arriveeTS1, transportTS1);
+    TS1->Afficher();
+
+    TrajetSimple *TS2 = new TrajetSimple(departTS2, arriveeTS2, transportTS2);
+    TS2->Afficher();
+
+    // TRAJET COMPOSE
+    char departTC11[] = "Lyon", arriveeTC11[] = "Marseille", transportTC11[] = "Bateau";
+    TrajetSimple *TC11 = new TrajetSimple(departTC11, arriveeTC11, transportTC11);
+
+    char departTC12[] = "Marseille", arriveeTC12[] = "Paris", transportTC12[] = "Avion";
+    TrajetSimple *TC12 = new TrajetSimple(departTC12, arriveeTC12, transportTC12);
+
+    TrajetCompose *TC1 = new TrajetCompose(2);
+    TC1->AjouterTrajet(TC11);
+    TC1->AjouterTrajet(TC12);
+    TC1->Afficher();
+
     return 0;
 }
