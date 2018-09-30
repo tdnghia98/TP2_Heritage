@@ -28,10 +28,11 @@ int main() {
     TC1->AjouterTrajet(TC11);
     TC1->AjouterTrajet(TC12);
     TC1->Afficher();
-    Catalogue c(3);
-    c.ajouterTrajet(TS1);
-    c.ajouterTrajet(TS2);
-    c.ajouterTrajet(TC1);
-    c.Afficher();
+    Catalogue* c;
+    c = new Catalogue(3);
+    c->ajouterTrajet(TS1);
+    c->ajouterTrajet(TS2);
+    c->ajouterTrajet(TC1);
+    c->Afficher();
     return 0;
 }

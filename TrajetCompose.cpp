@@ -62,7 +62,7 @@ void TrajetCompose::Afficher() const
     cout << "{" << endl;
     for (int curseur = 0; curseur < nbTrajetsCourant; curseur++)
     {
-        cout << "\t";
+        cout << "\t+ ";
         (*tableauTrajets[curseur]).Afficher();
     }
     cout << "}" << endl;

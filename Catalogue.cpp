@@ -34,13 +34,13 @@ void Catalogue::Afficher() {
         cout << "\t";
         (*tableauTrajet[i]).Afficher();
     }
-    cout << endl;
+    cout << "}" <<endl;
 }
 
 int Catalogue::ajouterTrajet(Trajet * trajet) {
     if (nbTrajetActuel < nbTrajetMax) {
         if (!Exist(*trajet)) {
-            *tableauTrajet[nbTrajetActuel] = *trajet;
+            tableauTrajet[nbTrajetActuel] = trajet;
             nbTrajetActuel++;
             return AJOUTE;
         } else {
@@ -54,12 +54,12 @@ int Catalogue::ajouterTrajet(Trajet * trajet) {
 
 //-------------------------------------------- Constructeurs - destructeur
 Catalogue::Catalogue(int n)
-{// n = nb Trajet max
+{
 #ifdef MAP
 cout << "Appel au constructeur de copie de <${file_base}>" << endl;
 #endif
     nbTrajetMax = n;
-    tableauTrajet = new Trajet*[n];
+    tableauTrajet = new Trajet* [n];
     nbTrajetActuel = 0;
 }
 
