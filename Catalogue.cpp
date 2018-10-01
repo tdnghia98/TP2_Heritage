@@ -1,10 +1,10 @@
 /*************************************************************************
-                           TrajetSimple  -  description
+                           Catalogue  -  description
                              -------------------
     début                : 27/09/2018
 *************************************************************************/
 
-//---------- Réalisation de la classe TrajetSimple (fichier TrajetSimple.cpp) ------------
+//---------- Réalisation de la classe Catalogue (fichier Catalogue.cpp) ------------
 
 //---------------------------------------------------------------- INCLUDE
 
@@ -13,58 +13,50 @@ using namespace std;
 #include <iostream>
 
 //------------------------------------------------------ Include personnel
-#include "TrajetSimple.h"
+#include "Catalogue.h"
 
 //------------------------------------------------------------- Constantes
 
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
-char* TrajetSimple::GetLieuDepart() const
+void Catalogue::Afficher()
 // Algorithme :
 //
 {
-    return lieuDepart;
+	cout << "Affichage du catalogue de trajets : " << endl;
+	listeDeTrajets->Afficher();
 } //----- Fin de Méthode
 
-char* TrajetSimple::GetLieuArrivee() const
+bool Catalogue::AjouterTrajet(Trajet *trajet)
 // Algorithme :
 //
 {
-    return lieuArrivee;
-} //----- Fin de Méthode
-
-void TrajetSimple::Afficher() const
-{
-    cout << "[" << lieuDepart << " -> " << lieuArrivee << " : " << moyenTransport <<"]" << endl;
+	return listeDeTrajets->AjouterTrajet(trajet);
 }
 
 //------------------------------------------------- Surcharge d'opérateurs
 
 //-------------------------------------------- Constructeurs - destructeur
-TrajetSimple::TrajetSimple (char* unLD, char* unLA, char* unMT) : lieuDepart(unLD),
-    lieuArrivee(unLA), moyenTransport(unMT)
+Catalogue::Catalogue(unsigned int capaciteMax)
 // Algorithme :
 //
 {
-    #ifdef MAP
-    cout << "Appel au constructeur de TrajetSimple" << endl;
-    #endif
-} //----- Fin de TrajetSimple
+	#ifdef MAP
+	    cout << "Appel au constructeur Catalogue" << endl;
+	#endif
 
+	listeDeTrajets = new ListeTrajets[capaciteMax];
+} //----- Fin de Catalogue
 
-TrajetSimple::~TrajetSimple( )
+Catalogue::~Catalogue()
 // Algorithme :
 //
 {
-    delete [] lieuDepart;
-    delete [] lieuArrivee;
-    delete [] moyenTransport;
-
-    #ifdef MAP
-    cout << "Appel au destructeur de TrajetSimple" << endl;
-    #endif
-} //----- Fin de ~TrajetSimple
+	#ifdef MAP
+	    cout << "Appel au destructeur de Catalogue" << endl;
+	#endif
+} //----- Fin de ~Catalogue
 
 //------------------------------------------------------------------ PRIVE
 

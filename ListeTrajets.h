@@ -1,59 +1,76 @@
 /*************************************************************************
-                           Catalogue  -  description
+                           ListeTrajets  -  description
                              -------------------
     début                : 27/09/2018
 *************************************************************************/
 
-//---------- Interface de la classe Catalogue (fichier Catalogue.h) ----------------
-#if ! defined (CATALOGUE_H)
-#define CATALOGUE_H
+//---------- Interface de la classe ListeTrajets (fichier ListeTrajets.h) ----------------
+#if ! defined (LISTETRAJETS_H)
+#define LISTETRAJETS_H
 
 //--------------------------------------------------- Interfaces utilisées
 #include "Trajet.h"
-#include "ListeTrajets.h"
 
 //------------------------------------------------------------- Constantes
 
 //------------------------------------------------------------------ Types
 
 //------------------------------------------------------------------------
-// Rôle de la classe Catalogue
+// Rôle de la classe ListeTrajets
 //
 //
 //------------------------------------------------------------------------
 
-class Catalogue
+class ListeTrajets
 {
 	//----------------------------------------------------------------- PUBLIC
 
 	public:
 		//----------------------------------------------------- Méthodes publiques
-	    void Afficher();
+	    bool AjouterTrajet(Trajet *trajet);
 	    // Mode d'emploi :
 	    //
 	    // Contrat :
 	    //
 
-		bool AjouterTrajet(Trajet *trajet);
+		void Afficher() const;
 		// Mode d'emploi :
-	    //
-	    // Contrat :
-	    //
+		//
+		// Contrat :
+		//
+
+		Trajet* GetPremierTrajet() const;
+		// Mode d'emploi :
+		//
+		// Contrat :
+		//
+
+		Trajet* GetDernierTrajet() const;
+		// Mode d'emploi :
+		//
+		// Contrat :
+		//
+
+		bool EstVide() const;
+		// Mode d'emploi :
+		//
+		// Contrat :
+		//
 
 		//------------------------------------------------- Surcharge d'opérateurs
 
 		//-------------------------------------------- Constructeurs - destructeur
-		Catalogue(unsigned int capaciteMax = NOMBRE_TRAJETS_MAX_DEFAUT);
-		// Mode d'emploi () :
-		//
-		// Contrat :
-		//
+	    ListeTrajets(unsigned int capaciteMax = NOMBRE_TRAJETS_MAX_DEFAUT);
+	    // Mode d'emploi :
+	    //
+	    // Contrat :
+	    //
 
-		virtual ~Catalogue();
-		// Mode d'emploi :
-		//
-		// Contrat :
-		//
+	    virtual ~ListeTrajets();
+	    // Mode d'emploi :
+	    //
+	    // Contrat :
+	    //
 
 	//------------------------------------------------------------------ PRIVE
 
@@ -66,9 +83,14 @@ class Catalogue
 		//----------------------------------------------------- Méthodes privées
 
 		//----------------------------------------------------- Attributs privées
-		ListeTrajets *listeDeTrajets;
+		int nombreTrajetsCourant;
+
+		int nombreTrajetsMax;
+
+		Trajet** trajets;
+
 };
 
-//-------------------------------- Autres définitions dépendantes de Catalogue
+//-------------------------------- Autres définitions dépendantes de ListeTrajets
 
-#endif // CATALOGUE_H
+#endif // LISTETRAJETS_H

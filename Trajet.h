@@ -14,7 +14,6 @@
 const int NOMBRE_TRAJETS_MAX_DEFAUT = 3;
 
 //------------------------------------------------------------------ Types
-enum CODE_RETOUR_AJOUT {PLEIN, CONTRAINTE_NON_VERIFIEE, AJOUTE};
 
 //------------------------------------------------------------------------
 // Rôle de la classe Trajet

@@ -10,10 +10,12 @@
 
 //--------------------------------------------------- Interfaces utilisées
 #include "Trajet.h"
+#include "ListeTrajets.h"
 
 //------------------------------------------------------------- Constantes
 
 //------------------------------------------------------------------ Types
+enum CODE_RETOUR_AJOUT {PLEIN, CONTRAINTE_NON_VERIFIEE, AJOUTE};
 
 //------------------------------------------------------------------------
 // Rôle de la classe TrajetCompose
@@ -54,7 +56,7 @@ class TrajetCompose : public Trajet
 		//------------------------------------------------- Surcharge d'opérateurs
 
 		//-------------------------------------------- Constructeurs - destructeur
-		TrajetCompose(unsigned int nbTrajetsM = NOMBRE_TRAJETS_MAX_DEFAUT);
+		TrajetCompose(unsigned int capaciteMax = NOMBRE_TRAJETS_MAX_DEFAUT);
 	    // Mode d'emploi :
 	    //
 	    // Contrat :
@@ -75,14 +77,10 @@ class TrajetCompose : public Trajet
 
 	private:
 		//----------------------------------------------------- Méthodes privées
-		bool VerifierContrainte(const Trajet & trajet) const;
+		bool ContrainteLieuEstVerifiee(const Trajet & trajet) const;
 
 		//----------------------------------------------------- Attributs privées
-		int nbTrajetsCourant;
-
-		int nbTrajetsMax;
-
-		Trajet** tableauTrajets;
+		ListeTrajets *listeDeTrajets;
 };
 
 //-------------------------------- Autres définitions dépendantes de TrajetCompose

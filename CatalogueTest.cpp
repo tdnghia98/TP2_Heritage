@@ -8,12 +8,15 @@
 
 /////////////////////////////////////////////////////////////////  INCLUDE
 //-------------------------------------------------------- Include système
+#include <iostream>
+using namespace std;
 
 //------------------------------------------------------ Include personnel
 #include "CatalogueTest.h"
 #include "Trajet.h"
 #include "TrajetSimple.h"
 #include "TrajetCompose.h"
+#include "Catalogue.h"
 
 ///////////////////////////////////////////////////////////////////  PRIVE
 //------------------------------------------------------------- Constantes
@@ -33,10 +36,8 @@ int main()
 	char departTS2[] = "Lyon", arriveeTS2[] = "Paris", transportTS2[] = "Auto";
 
 	TrajetSimple *TS1 = new TrajetSimple(departTS1, arriveeTS1, transportTS1);
-    TS1->Afficher();
 
 	TrajetSimple *TS2 = new TrajetSimple(departTS2, arriveeTS2, transportTS2);
-    TS2->Afficher();
 
 	// TRAJET COMPOSE
 	char departTC11[] = "Lyon", arriveeTC11[] = "Marseille", transportTC11[] = "Bateau";
@@ -48,8 +49,13 @@ int main()
 	TrajetCompose *TC1 = new TrajetCompose(2);
 	TC1->AjouterTrajet(TC11);
 	TC1->AjouterTrajet(TC12);
-    TC1->Afficher();
 
+	// CATALOGUE
+	Catalogue c(3);
+	cout << c.AjouterTrajet(TS1) << endl;
+	cout << c.AjouterTrajet(TS2) << endl;
+	cout << c.AjouterTrajet(TC1) << endl;
+	c.Afficher();
 
 	return 0;
 }

@@ -15,6 +15,7 @@ using namespace std;
 
 //------------------------------------------------------ Include personnel
 #include "TrajetCompose.h"
+#include "ListeTrajets.h"
 
 //------------------------------------------------------------- Constantes
 
@@ -25,49 +26,41 @@ int TrajetCompose::AjouterTrajet(Trajet *trajet)
 // Algorithme :
 //
 {
-    if (nbTrajetsCourant < nbTrajetsMax)
-    {
-        if (VerifierContrainte(*trajet))
-        {
-            tableauTrajets[nbTrajetsCourant++] = trajet;
-            return AJOUTE;
-        }
+	if (ContrainteLieuEstVerifiee(*trajet))
+	{
+		if (listeDeTrajets->AjouterTrajet(trajet))
+		{
+			return AJOUTE;
+		}
+		return PLEIN;
+	}
+	return CONTRAINTE_NON_VERIFIEE;
 
-        return CONTRAINTE_NON_VERIFIEE;
-    }
-
-    return PLEIN;
 } //----- Fin de Méthode
 
 char* TrajetCompose::GetLieuDepart() const
 // Algorithme :
 //
 {
-    return (*tableauTrajets[0]).GetLieuDepart();
+    return listeDeTrajets->GetPremierTrajet()->GetLieuDepart();
 } //----- Fin de Méthode
 
 char* TrajetCompose::GetLieuArrivee() const
 // Algorithme :
 //
 {
-    return (*tableauTrajets[nbTrajetsCourant - 1]).GetLieuArrivee();
+    return listeDeTrajets->GetDernierTrajet()->GetLieuArrivee();
 } //----- Fin de Méthode
 
 void TrajetCompose::Afficher() const
 {
-    cout << "{" << endl;
-    for (int curseur = 0; curseur < nbTrajetsCourant; curseur++)
-    {
-        cout << "\t";
-        (*tableauTrajets[curseur]).Afficher();
-    }
-    cout << "}" << endl;
+    listeDeTrajets->Afficher();
 }
 
 //------------------------------------------------- Surcharge d'opérateurs
 
 //-------------------------------------------- Constructeurs - destructeur
-TrajetCompose::TrajetCompose(unsigned int nbTrajetsM)
+TrajetCompose::TrajetCompose(unsigned int capaciteMax)
 // Algorithme :
 //
 {
@@ -75,9 +68,7 @@ TrajetCompose::TrajetCompose(unsigned int nbTrajetsM)
     cout << "Appel au constructeur de TrajetCompose" << endl;
     #endif
 
-    tableauTrajets = new Trajet*[nbTrajetsM];
-    nbTrajetsMax = nbTrajetsM;
-    nbTrajetsCourant = 0;
+	listeDeTrajets = new ListeTrajets[capaciteMax];
 } //----- Fin de TrajetCompose
 
 
@@ -88,13 +79,6 @@ TrajetCompose::~TrajetCompose()
     #ifdef MAP
     cout << "Appel au destructeur de TrajetCompose" << endl;
     #endif
-
-    for (int curseur = 0; curseur < nbTrajetsCourant; curseur++)
-    {
-        delete tableauTrajets[curseur];
-    }
-
-    delete [] tableauTrajets;
 } //----- Fin de ~TrajetCompose
 
 //------------------------------------------------------------------ PRIVE
@@ -102,7 +86,7 @@ TrajetCompose::~TrajetCompose()
 //----------------------------------------------------- Méthodes protégées
 
 //------------------------------------------------------- Méthodes privées
-bool TrajetCompose::VerifierContrainte(const Trajet & trajet) const
+bool TrajetCompose::ContrainteLieuEstVerifiee(const Trajet & trajet) const
 {
-    return nbTrajetsCourant == 0 || (strcmp(trajet.GetLieuDepart(), GetLieuArrivee()) == 0);
+	return listeDeTrajets->EstVide() || (strcmp(listeDeTrajets->GetDernierTrajet()->GetLieuArrivee(), trajet.GetLieuDepart()) == 0);
 }
