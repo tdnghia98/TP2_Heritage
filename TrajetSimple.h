@@ -39,7 +39,7 @@ class TrajetSimple : public Trajet
 		// Contrat :
 		//
 
-		virtual void Afficher() const;
+		virtual void Afficher(int profondeur = 0) const;
 		// Mode d'emploi :
 		//
 		// Contrat :

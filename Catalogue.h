@@ -28,7 +28,7 @@ class Catalogue
 
 	public:
 		//----------------------------------------------------- Méthodes publiques
-	    void Afficher();
+	    void Afficher(int profondeur = 0);
 	    // Mode d'emploi :
 	    //
 	    // Contrat :

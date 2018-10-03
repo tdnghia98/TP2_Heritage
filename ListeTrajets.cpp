@@ -22,15 +22,24 @@ using namespace std;
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
-void ListeTrajets::Afficher() const
+void ListeTrajets::Afficher(int profondeur) const
 // Algorithme :
 //
 {
+	for (int iProfondeur = 0; iProfondeur < profondeur; iProfondeur++)
+	{
+		cout << "\t";
+	}
 	cout << "{" << endl;
+
 	for (int curseur = 0; curseur < nombreTrajetsCourant; curseur++)
 	{
-		//cout << "\t";
-		(*trajets[curseur]).Afficher();
+		(*trajets[curseur]).Afficher(profondeur + 1);
+	}
+
+	for (int iProfondeur = 0; iProfondeur < profondeur; iProfondeur++)
+	{
+		cout << "\t";
 	}
 	cout << "}" << endl;
 } //----- Fin de Méthode

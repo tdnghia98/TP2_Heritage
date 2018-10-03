@@ -69,7 +69,7 @@ int main()
 void RechercherVoyage(Catalogue *catalogue)
 // Algorithme :
 //
-{	
+{
 	char *lieuDepart = new char[100],
 	*lieuArrivee = new char[100];
 

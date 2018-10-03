@@ -34,8 +34,12 @@ char* TrajetSimple::GetLieuArrivee() const
     return lieuArrivee;
 } //----- Fin de Méthode
 
-void TrajetSimple::Afficher() const
+void TrajetSimple::Afficher(int profondeur) const
 {
+	for (int iProfondeur = 0; iProfondeur < profondeur; iProfondeur++)
+	{
+		cout << "\t";
+	}
     cout << "[" << lieuDepart << " -> " << lieuArrivee << " : " << moyenTransport <<"]" << endl;
 }
 

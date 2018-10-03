@@ -38,7 +38,7 @@ class Trajet
 		// Contrat :
 		//
 
-		virtual void Afficher() const = 0;
+		virtual void Afficher(int profondeur = 0) const = 0;
 		// Mode d'emploi :
 		//
 		// Contrat :

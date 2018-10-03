@@ -52,9 +52,9 @@ char* TrajetCompose::GetLieuArrivee() const
     return listeDeTrajets->GetDernierTrajet()->GetLieuArrivee();
 } //----- Fin de Méthode
 
-void TrajetCompose::Afficher() const
+void TrajetCompose::Afficher(int profondeur) const
 {
-    listeDeTrajets->Afficher();
+    listeDeTrajets->Afficher(profondeur);
 }
 
 //------------------------------------------------- Surcharge d'opérateurs

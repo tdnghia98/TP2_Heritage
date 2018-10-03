@@ -33,7 +33,7 @@ class ListeTrajets
 	    // Contrat :
 	    //
 
-		void Afficher() const;
+		void Afficher(int profondeur) const;
 		// Mode d'emploi :
 		//
 		// Contrat :

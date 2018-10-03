@@ -22,7 +22,7 @@ using namespace std;
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
-void Catalogue::Afficher()
+void Catalogue::Afficher(int profondeur)
 // Algorithme :
 //
 {
@@ -33,7 +33,7 @@ void Catalogue::Afficher()
 	else
 	{
 		cout << "Affichage du catalogue de trajets : " << endl;
-		listeDeTrajets->Afficher();
+		listeDeTrajets->Afficher(profondeur);
 	}
 
 } //----- Fin de Méthode
