@@ -42,6 +42,8 @@ void TrajetSimple::Afficher() const
 //------------------------------------------------- Surcharge d'opérateurs
 
 //-------------------------------------------- Constructeurs - destructeur
+TrajetSimple::TrajetSimple() {}
+
 TrajetSimple::TrajetSimple (char* unLD, char* unLA, char* unMT) : lieuDepart(unLD),
     lieuArrivee(unLA), moyenTransport(unMT)
 // Algorithme :

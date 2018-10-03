@@ -46,7 +46,13 @@ class TrajetSimple : public Trajet
 		//
 
 		//-------------------------------------------- Constructeurs - destructeur
-		TrajetSimple (char* LieuDepart, char* LieuArrivee, char* MoyenTransport);
+		TrajetSimple();
+		// Mode d'emploi :
+		//
+		// Contrat :
+		//
+
+		TrajetSimple(char* LieuDepart, char* LieuArrivee, char* MoyenTransport);
 		// Mode d'emploi :
 		//
 		// Contrat :

@@ -76,6 +76,8 @@ TrajetCompose::~TrajetCompose()
 // Algorithme :
 //
 {
+	delete listeDeTrajets;
+
     #ifdef MAP
     cout << "Appel au destructeur de TrajetCompose" << endl;
     #endif

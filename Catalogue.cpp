@@ -15,6 +15,7 @@ using namespace std;
 
 //------------------------------------------------------ Include personnel
 #include "Catalogue.h"
+#include "TrajetCompose.h"
 
 //------------------------------------------------------------- Constantes
 
@@ -25,8 +26,16 @@ void Catalogue::Afficher()
 // Algorithme :
 //
 {
-	cout << "Affichage du catalogue de trajets : " << endl;
-	listeDeTrajets->Afficher();
+	if (listeDeTrajets->GetNombreTrajetsCourant() == 0)
+	{
+		cout << "Le catalogue est vide." << endl;
+	}
+	else
+	{
+		cout << "Affichage du catalogue de trajets : " << endl;
+		listeDeTrajets->Afficher();
+	}
+
 } //----- Fin de Méthode
 
 bool Catalogue::AjouterTrajet(Trajet *trajet)
@@ -42,17 +51,24 @@ void Catalogue::RechercherTrajet(char *lieuDepart, char *lieuArrivee)
 {
 	Trajet *trajet;
 	TrajetCompose *trajetCompose;
-	int curseurTrajet;
+	int curseurTrajet, nombreTrajetsCorrespondants = 0;
 
 	//Recherche simple
-	cout << "[RECHERCHE SIMPLE] Voyage de " << lieuDepart << " à " << lieuArrivee << " : " << endl;
+	cout << "Voyage de \"" << lieuDepart << "\" à \"" << lieuArrivee << "\" : " << endl;
+
 	for (int iTrajet = 0; iTrajet < listeDeTrajets->GetNombreTrajetsCourant(); iTrajet++)
 	{
 		trajet = listeDeTrajets->GetTrajet(iTrajet);
 		if (strcmp(lieuDepart, trajet->GetLieuDepart()) == 0 && strcmp(lieuArrivee, trajet->GetLieuArrivee()) == 0)
 		{
 			trajet->Afficher();
+			nombreTrajetsCorrespondants++;
 		}
+	}
+
+	if (nombreTrajetsCorrespondants == 0)
+	{
+		cout << "Aucun trajet correspondant" << endl;
 	}
 
 	//Recherche composée
