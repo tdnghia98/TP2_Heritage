@@ -65,6 +65,27 @@ Trajet* ListeTrajets::GetDernierTrajet() const
 	return trajets[nombreTrajetsCourant - 1];
 }
 
+int ListeTrajets::GetNombreTrajetsCourant() const
+// Algorithme :
+//
+{
+	return nombreTrajetsCourant;
+}
+
+Trajet* ListeTrajets::GetTrajet(int indice) const
+// Algorithme :
+//
+{
+	Trajet *trajet;
+
+	if (indice <= nombreTrajetsCourant)
+	{
+		trajet = trajets[indice];
+	}
+
+	return trajet;
+}
+
 bool ListeTrajets::EstVide() const
 // Algorithme :
 //

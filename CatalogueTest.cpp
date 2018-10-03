@@ -52,9 +52,10 @@ int main()
 
 	// CATALOGUE
 	Catalogue c(3);
-	cout << c.AjouterTrajet(TS1) << endl;
-	cout << c.AjouterTrajet(TS2) << endl;
-	cout << c.AjouterTrajet(TC1) << endl;
+	c.AjouterTrajet(TS1);
+	c.AjouterTrajet(TS2);
+	c.AjouterTrajet(TC1);
+	c.RechercherTrajet(departTS1, arriveeTS1);
 	c.Afficher();
 
 	return 0;

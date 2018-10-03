@@ -11,6 +11,7 @@
 //-------------------------------------------------------- Include système
 using namespace std;
 #include <iostream>
+#include <cstring>
 
 //------------------------------------------------------ Include personnel
 #include "Catalogue.h"
@@ -33,6 +34,28 @@ bool Catalogue::AjouterTrajet(Trajet *trajet)
 //
 {
 	return listeDeTrajets->AjouterTrajet(trajet);
+}
+
+void Catalogue::RechercherTrajet(char *lieuDepart, char *lieuArrivee)
+// Algorithme :
+//
+{
+	Trajet *trajet;
+	TrajetCompose *trajetCompose;
+	int curseurTrajet;
+
+	//Recherche simple
+	cout << "[RECHERCHE SIMPLE] Voyage de " << lieuDepart << " à " << lieuArrivee << " : " << endl;
+	for (int iTrajet = 0; iTrajet < listeDeTrajets->GetNombreTrajetsCourant(); iTrajet++)
+	{
+		trajet = listeDeTrajets->GetTrajet(iTrajet);
+		if (strcmp(lieuDepart, trajet->GetLieuDepart()) == 0 && strcmp(lieuArrivee, trajet->GetLieuArrivee()) == 0)
+		{
+			trajet->Afficher();
+		}
+	}
+
+	//Recherche composée
 }
 
 //------------------------------------------------- Surcharge d'opérateurs

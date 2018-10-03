@@ -51,6 +51,18 @@ class ListeTrajets
 		// Contrat :
 		//
 
+		int GetNombreTrajetsCourant() const;
+		// Mode d'emploi :
+		//
+		// Contrat :
+		//
+
+		Trajet* GetTrajet(int indice) const;
+		// Mode d'emploi :
+		//
+		// Contrat :
+		//
+
 		bool EstVide() const;
 		// Mode d'emploi :
 		//

@@ -40,6 +40,8 @@ class Catalogue
 	    // Contrat :
 	    //
 
+		void RechercherTrajet(char *lieuDepart, char *lieuArrivee);
+
 		//------------------------------------------------- Surcharge d'opérateurs
 
 		//-------------------------------------------- Constructeurs - destructeur
