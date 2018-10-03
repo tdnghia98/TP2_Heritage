@@ -51,12 +51,12 @@ int main()
 	TC1->AjouterTrajet(TC12);
 
 	// CATALOGUE
-	Catalogue c(3);
-	c.AjouterTrajet(TS1);
-	c.AjouterTrajet(TS2);
-	c.AjouterTrajet(TC1);
-	c.RechercherTrajet(departTS1, arriveeTS1);
-	c.Afficher();
+	Catalogue *c = new Catalogue;
+	c->AjouterTrajet(TS1);
+	c->AjouterTrajet(TS2);
+	c->AjouterTrajet(TC1);
+	//c.RechercherTrajet(departTS1, arriveeTS1);
+	c->Afficher();
 
 	return 0;
 }
