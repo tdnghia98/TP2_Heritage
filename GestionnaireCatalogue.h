@@ -1,16 +1,15 @@
 /*************************************************************************
-                           Catalogue  -  description
+                           GestionnaireCatalogue  -  description
                              -------------------
-    début                : 27/09/2018
+    début                : 04/10/2018
 *************************************************************************/
 
-//---------- Interface de la classe Catalogue (fichier Catalogue.h) ----------------
-#if ! defined (CATALOGUE_H)
-#define CATALOGUE_H
+//---------- Interface de la classe GestionnaireCatalogue (fichier GestionnaireCatalogue.h) ----------------
+#if ! defined (GESTIONNAIRECATALOGUE_H)
+#define GESTIONNAIRECATALOGUE_H
 
 //--------------------------------------------------- Interfaces utilisées
-#include "Trajet.h"
-#include "CollectionTrajets.h"
+#include "Catalogue.h"
 #include "TrajetSimple.h"
 #include "TrajetCompose.h"
 
@@ -19,40 +18,42 @@
 //------------------------------------------------------------------ Types
 
 //------------------------------------------------------------------------
-// Rôle de la classe Catalogue
+// Rôle de la classe GestionnaireCatalogue
 //
 //
 //------------------------------------------------------------------------
 
-class Catalogue
+class GestionnaireCatalogue
 {
 	//----------------------------------------------------------------- PUBLIC
 
 	public:
 		//----------------------------------------------------- Méthodes publiques
-	    void Afficher(int profondeur = 0);
+		void LancerMenu();
 	    // Mode d'emploi :
 	    //
 	    // Contrat :
 	    //
 
-		void AjouterTrajet(Trajet *trajet);
-		// Mode d'emploi :
-	    //
-	    // Contrat :
-	    //
-
-		// void AjouterTrajet(Trajet *trajet);
-
-		// void RechercherTrajet(char *lieuDepart, char *lieuArrivee);
-
-		void RechercherVoyageCompose(char *lieuDepart, char *lieuArrivee);
+		void AjouterTrajet();
 		// Mode d'emploi :
 		//
 		// Contrat :
 		//
 
-		void RechercherVoyageSimple(char *lieuDepart, char *lieuArrivee);
+		void RechercherVoyage(int type);
+		// Mode d'emploi :
+		//
+		// Contrat :
+		//
+
+		TrajetSimple* CreerTrajetSimple();
+		// Mode d'emploi :
+		//
+		// Contrat :
+		//
+
+		TrajetCompose* CreerTrajetCompose();
 		// Mode d'emploi :
 		//
 		// Contrat :
@@ -61,17 +62,17 @@ class Catalogue
 		//------------------------------------------------- Surcharge d'opérateurs
 
 		//-------------------------------------------- Constructeurs - destructeur
-		Catalogue(unsigned int capaciteMax = NOMBRE_TRAJETS_MAX_DEFAUT);
-		// Mode d'emploi () :
-		//
-		// Contrat :
-		//
+	    GestionnaireCatalogue(Catalogue *unCatalogue);
+	    // Mode d'emploi :
+	    //
+	    // Contrat :
+	    //
 
-		virtual ~Catalogue();
-		// Mode d'emploi :
-		//
-		// Contrat :
-		//
+	    virtual ~GestionnaireCatalogue();
+	    // Mode d'emploi :
+	    //
+	    // Contrat :
+	    //
 
 	//------------------------------------------------------------------ PRIVE
 
@@ -82,17 +83,29 @@ class Catalogue
 
 	private:
 		//----------------------------------------------------- Méthodes privées
-		void ParcoursProfondeur(Trajet *sommet, CollectionTrajets *listeTraitement,
-			char *lieuDepart, char *lieuArrivee, int *nombreVoyagesTrouves);
+		void AfficherMenuGestionnaire() const;
+		// Mode d'emploi :
+		//
+		// Contrat :
+		//
+
+		int SaisirChoix(int borneInf, int borneSup);
+		// Mode d'emploi :
+		//
+		// Contrat :
+		//
+
+		int SaisirNombreTrajets();
 		// Mode d'emploi :
 		//
 		// Contrat :
 		//
 
 		//----------------------------------------------------- Attributs privées
-		CollectionTrajets *listeDeTrajets;
+		Catalogue *catalogue;
+
 };
 
-//-------------------------------- Autres définitions dépendantes de Catalogue
+//-------------------------------- Autres définitions dépendantes de GestionnaireCatalogue
 
-#endif // CATALOGUE_H
+#endif // GESTIONNAIRECATALOGUE_H

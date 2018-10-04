@@ -1,15 +1,15 @@
 /*************************************************************************
                            CatalogueTest  -  description
                              -------------------
-    début                : 27/09/2018
+    début                : 03/10/2018
 *************************************************************************/
 
-//---------- Interface du module CatalogueTest (fichier CatalogueTest.h) -------------------
+//---------- Interface du module Menu (fichier CatalogueTest.h) -------------------
 #if ! defined (CATALOGUETEST_H)
 #define CATALOGUETEST_H
 
 //------------------------------------------------------------------------
-// Rôle du module CatalogueTest
+// Rôle du module Menu
 //
 //
 //------------------------------------------------------------------------
@@ -17,6 +17,9 @@
 /////////////////////////////////////////////////////////////////  INCLUDE
 //--------------------------------------------------- Interfaces utilisées
 #include "Catalogue.h"
+#include "Trajet.h"
+#include "TrajetCompose.h"
+#include "TrajetSimple.h"
 
 //------------------------------------------------------------- Constantes
 
@@ -26,10 +29,8 @@
 //---------------------------------------------------- Fonctions publiques
 int main();
 
-// type Nom ( liste de paramètres );
-// Mode d'emploi :
-//
-// Contrat :
-//
+Catalogue* GetExempleCatalogue();
+
+TrajetSimple* GetTrajetSimple(char lD[], char lA[], char mT[]);
 
 #endif // CATALOGUETEST_H
