@@ -27,13 +27,19 @@ class ListeTrajets
 
 	public:
 		//----------------------------------------------------- Méthodes publiques
-	    bool AjouterTrajet(Trajet *trajet);
+	    void AjouterTrajet(Trajet *trajet);
 	    // Mode d'emploi :
 	    //
 	    // Contrat :
 	    //
 
-		void Afficher(int profondeur) const;
+		void RetirerDernierTrajet();
+		// Mode d'emploi :
+		//
+		// Contrat :
+		//
+
+		void Afficher(int profondeur = 0) const;
 		// Mode d'emploi :
 		//
 		// Contrat :
@@ -69,6 +75,12 @@ class ListeTrajets
 		// Contrat :
 		//
 
+		bool EstDans(Trajet *trajet) const;
+		// Mode d'emploi :
+		//
+		// Contrat :
+		//
+
 		//------------------------------------------------- Surcharge d'opérateurs
 
 		//-------------------------------------------- Constructeurs - destructeur
@@ -93,6 +105,11 @@ class ListeTrajets
 
 	private:
 		//----------------------------------------------------- Méthodes privées
+		void Ajuster();
+		// Mode d'emploi :
+		//
+		// Contrat :
+		//
 
 		//----------------------------------------------------- Attributs privées
 		int nombreTrajetsCourant;

@@ -11,6 +11,8 @@
 //--------------------------------------------------- Interfaces utilisées
 #include "Trajet.h"
 #include "ListeTrajets.h"
+#include "TrajetSimple.h"
+#include "TrajetCompose.h"
 
 //------------------------------------------------------------- Constantes
 
@@ -34,13 +36,39 @@ class Catalogue
 	    // Contrat :
 	    //
 
-		bool AjouterTrajet(Trajet *trajet);
+		void AjouterTrajet();
 		// Mode d'emploi :
 	    //
 	    // Contrat :
 	    //
 
+		void AjouterTrajet(Trajet *trajet);
+
 		void RechercherTrajet(char *lieuDepart, char *lieuArrivee);
+
+		TrajetSimple* CreerTrajetSimple();
+		// Mode d'emploi :
+		//
+		// Contrat :
+		//
+
+		TrajetCompose* CreerTrajetCompose();
+		// Mode d'emploi :
+		//
+		// Contrat :
+		//
+
+		void Menu();
+		// Mode d'emploi :
+		//
+		// Contrat :
+		//
+
+		void RechercherVoyageCompose();
+		// Mode d'emploi :
+		//
+		// Contrat :
+		//
 
 		//------------------------------------------------- Surcharge d'opérateurs
 
@@ -66,6 +94,30 @@ class Catalogue
 
 	private:
 		//----------------------------------------------------- Méthodes privées
+		void ParcoursProfondeur(ListeTrajets *listeDeTrajets, Trajet *sommet, ListeTrajets *listeTraitement,
+			char *lieuDepart, char *lieuArrivee, int *nombreVoyagesTrouves);
+		// Mode d'emploi :
+		//
+		// Contrat :
+		//
+
+		void AfficherMenu();
+		// Mode d'emploi :
+		//
+		// Contrat :
+		//
+
+		int SaisirChoix(int borneInf, int borneSup);
+		// Mode d'emploi :
+		//
+		// Contrat :
+		//
+
+		int SaisirNombreTrajets();
+		// Mode d'emploi :
+		//
+		// Contrat :
+		//
 
 		//----------------------------------------------------- Attributs privées
 		ListeTrajets *listeDeTrajets;

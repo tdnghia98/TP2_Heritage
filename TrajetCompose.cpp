@@ -28,11 +28,8 @@ int TrajetCompose::AjouterTrajet(Trajet *trajet)
 {
 	if (ContrainteLieuEstVerifiee(*trajet))
 	{
-		if (listeDeTrajets->AjouterTrajet(trajet))
-		{
-			return AJOUTE;
-		}
-		return PLEIN;
+		listeDeTrajets->AjouterTrajet(trajet);
+		return AJOUTE;
 	}
 	return CONTRAINTE_NON_VERIFIEE;
 

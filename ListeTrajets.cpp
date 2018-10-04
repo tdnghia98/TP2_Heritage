@@ -44,21 +44,28 @@ void ListeTrajets::Afficher(int profondeur) const
 	cout << "}" << endl;
 } //----- Fin de Méthode
 
-bool ListeTrajets::AjouterTrajet(Trajet *trajet)
+void ListeTrajets::AjouterTrajet(Trajet *trajet)
 // Algorithme :
 //
 {
-	if (nombreTrajetsCourant < nombreTrajetsMax)
+	if (nombreTrajetsCourant == nombreTrajetsMax)
 	{
-		//if (ContrainteLieuEstVerifiee(*trajet))
-		//{
-		trajets[nombreTrajetsCourant++] = trajet;
-		return true;
-		//}
+		Ajuster();
 	}
 
-	return false;
+	trajets[nombreTrajetsCourant++] = trajet;
 } //----- Fin de Méthode
+
+void ListeTrajets::RetirerDernierTrajet()
+// Algorithme :
+//
+{
+	if (nombreTrajetsCourant > 0)
+	{
+		//delete trajets[--nombreTrajetsCourant];
+		nombreTrajetsCourant--;
+	}
+}
 
 Trajet* ListeTrajets::GetPremierTrajet() const
 // Algorithme :
@@ -102,6 +109,18 @@ bool ListeTrajets::EstVide() const
 	return nombreTrajetsCourant == 0;
 }
 
+bool ListeTrajets::EstDans(Trajet *trajet) const
+{
+	for (int iTrajet = 0; iTrajet < nombreTrajetsCourant; iTrajet++)
+	{
+		if (trajet == trajets[iTrajet])
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
 //------------------------------------------------- Surcharge d'opérateurs
 
 //-------------------------------------------- Constructeurs - destructeur
@@ -139,3 +158,20 @@ ListeTrajets::~ListeTrajets()
 //----------------------------------------------------- Méthodes protégées
 
 //------------------------------------------------------- Méthodes privées
+void ListeTrajets::Ajuster()
+// Algorithme :
+//
+{
+	Trajet **nouvelleListe;
+	int nouvelleTaille;
+
+	nombreTrajetsMax *= 2;
+	nouvelleListe = new Trajet*[nombreTrajetsMax];
+	for (int iCurseur = 0; iCurseur < nombreTrajetsCourant; iCurseur++)
+	{
+		nouvelleListe[iCurseur] = trajets[iCurseur];
+	}
+
+	delete [] trajets;
+	trajets = nouvelleListe;
+}

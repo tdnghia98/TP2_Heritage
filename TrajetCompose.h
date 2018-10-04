@@ -13,9 +13,9 @@
 #include "ListeTrajets.h"
 
 //------------------------------------------------------------- Constantes
+enum CODE_RETOUR_AJOUT {CONTRAINTE_NON_VERIFIEE, AJOUTE};
 
 //------------------------------------------------------------------ Types
-enum CODE_RETOUR_AJOUT {PLEIN, CONTRAINTE_NON_VERIFIEE, AJOUTE};
 
 //------------------------------------------------------------------------
 // Rôle de la classe TrajetCompose
