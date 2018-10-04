@@ -42,9 +42,9 @@ class Catalogue
 	    // Contrat :
 	    //
 
-		void AjouterTrajet(Trajet *trajet);
+		// void AjouterTrajet(Trajet *trajet);
 
-		void RechercherTrajet(char *lieuDepart, char *lieuArrivee);
+		// void RechercherTrajet(char *lieuDepart, char *lieuArrivee);
 
 		TrajetSimple* CreerTrajetSimple();
 		// Mode d'emploi :
@@ -100,7 +100,7 @@ class Catalogue
 
 	private:
 		//----------------------------------------------------- Méthodes privées
-		void ParcoursProfondeur(CollectionTrajets *listeDeTrajets, Trajet *sommet, CollectionTrajets *listeTraitement,
+		void ParcoursProfondeur(Trajet *sommet, CollectionTrajets *listeTraitement,
 			char *lieuDepart, char *lieuArrivee, int *nombreVoyagesTrouves);
 		// Mode d'emploi :
 		//

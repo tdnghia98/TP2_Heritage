@@ -137,7 +137,7 @@ void Catalogue::RechercherVoyageCompose()
 		if (strcmp(lieuDepart, trajet->GetLieuDepart()) == 0)
 		{
 			listeTraitement->AjouterTrajet(trajet);
-			ParcoursProfondeur(listeDeTrajets, trajet, listeTraitement, lieuDepart, lieuArrivee, nombreVoyagesTrouves);
+			ParcoursProfondeur(trajet, listeTraitement, lieuDepart, lieuArrivee, nombreVoyagesTrouves);
 			listeTraitement->RetirerDernierTrajet();
 		}
 	}
@@ -150,42 +150,42 @@ void Catalogue::RechercherVoyageCompose()
 	delete nombreVoyagesTrouves;
 }
 
-void Catalogue::RechercherTrajet(char *lieuDepart, char *lieuArrivee)
-// Algorithme :
+// void Catalogue::RechercherTrajet(char *lieuDepart, char *lieuArrivee)
+// // Algorithme :
+// //
+// {
+// 	Trajet *trajet;
+// 	int *nombreVoyagesTrouves = new int;
 //
-{
-	Trajet *trajet;
-	int *nombreVoyagesTrouves = new int;
-
-	cout << "Voyage de \"" << lieuDepart << "\" à \"" << lieuArrivee << "\" : " << endl;
-
-	CollectionTrajets *listeTraitement = new CollectionTrajets;
-	*nombreVoyagesTrouves = 0;
-	for (int iTrajet = 0; iTrajet < listeDeTrajets->GetNombreTrajetsCourant(); iTrajet++)
-	{
-		trajet = listeDeTrajets->GetTrajet(iTrajet);
-		if (strcmp(lieuDepart, trajet->GetLieuDepart()) == 0)
-		{
-			listeTraitement->AjouterTrajet(trajet);
-			ParcoursProfondeur(listeDeTrajets, trajet, listeTraitement, lieuDepart, lieuArrivee, nombreVoyagesTrouves);
-			listeTraitement->RetirerDernierTrajet();
-		}
-	}
-
-	if (*nombreVoyagesTrouves == 0)
-	{
-		cout << "Aucun voyage trouve !" << endl;
-	}
-
-	delete nombreVoyagesTrouves;
-}
-
-void Catalogue::AjouterTrajet(Trajet *trajet)
-// Algorithme :
+// 	cout << "Voyage de \"" << lieuDepart << "\" à \"" << lieuArrivee << "\" : " << endl;
 //
-{
-	listeDeTrajets->AjouterTrajet(trajet);
-}
+// 	CollectionTrajets *listeTraitement = new CollectionTrajets;
+// 	*nombreVoyagesTrouves = 0;
+// 	for (int iTrajet = 0; iTrajet < listeDeTrajets->GetNombreTrajetsCourant(); iTrajet++)
+// 	{
+// 		trajet = listeDeTrajets->GetTrajet(iTrajet);
+// 		if (strcmp(lieuDepart, trajet->GetLieuDepart()) == 0)
+// 		{
+// 			listeTraitement->AjouterTrajet(trajet);
+// 			ParcoursProfondeur(listeDeTrajets, trajet, listeTraitement, lieuDepart, lieuArrivee, nombreVoyagesTrouves);
+// 			listeTraitement->RetirerDernierTrajet();
+// 		}
+// 	}
+//
+// 	if (*nombreVoyagesTrouves == 0)
+// 	{
+// 		cout << "Aucun voyage trouve !" << endl;
+// 	}
+//
+// 	delete nombreVoyagesTrouves;
+// }
+
+// void Catalogue::AjouterTrajet(Trajet *trajet)
+// // Algorithme :
+// //
+// {
+// 	listeDeTrajets->AjouterTrajet(trajet);
+// }
 
 void Catalogue::AjouterTrajet()
 // Algorithme :
@@ -287,7 +287,7 @@ Catalogue::~Catalogue()
 //----------------------------------------------------- Méthodes protégées
 
 //------------------------------------------------------- Méthodes privées
-void Catalogue::ParcoursProfondeur(CollectionTrajets *listeDeTrajets, Trajet *sommet, CollectionTrajets *listeTraitement,
+void Catalogue::ParcoursProfondeur(Trajet *sommet, CollectionTrajets *listeTraitement,
 	char *lieuDepart, char *lieuArrivee, int *nombreVoyagesTrouves)
 // Algorithme :
 //
@@ -302,7 +302,7 @@ void Catalogue::ParcoursProfondeur(CollectionTrajets *listeDeTrajets, Trajet *so
 			if (!listeTraitement->EstDans(trajet)) //éviter récursivité infinie (T-B // B-C // C-T)
 			{
 				listeTraitement->AjouterTrajet(trajet);
-				ParcoursProfondeur(listeDeTrajets, trajet, listeTraitement, lieuDepart, lieuArrivee, nombreVoyagesTrouves);
+				ParcoursProfondeur(trajet, listeTraitement, lieuDepart, lieuArrivee, nombreVoyagesTrouves);
 			}
 		}
 	}
