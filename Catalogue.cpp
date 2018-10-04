@@ -39,14 +39,13 @@ void Catalogue::Afficher() {
 
 void Catalogue::rechercheTrajet() {
     bool trouveTrajets = false;
-    char* lD;
-    lD = new char[100];
-    char* lA = new char[100];
+    char lD[100];
+    char lA[100];
     cout << "Lieu de depart : ";
     cin >> lD;
     cout << "Lieu d'arrive : ";
     cin >> lA;
-    cout << "Les trajets possibles pour aller de " << lD << " a " << lA << " sont: \n";
+    cout << "Les trajets  possibles pour aller de " << lD << " a " << lA << " sont: \n";
     for (int i = 0; i < nbTrajetActuel; i++) {
         if (strcmp(tableauTrajet[i]->GetLieuDepart(), lD) == 0 && strcmp(tableauTrajet[i]->GetLieuArrivee(), lA) == 0) {
             cout << "- ";
@@ -57,6 +56,31 @@ void Catalogue::rechercheTrajet() {
     if (!trouveTrajets) {
         cout << "Pas de trajet possible";
     }
+
+}
+
+void Catalogue::rechercheTrajetAvancee() {
+    char lD[100];
+    char lA[100];
+    cout << "Lieu de depart : ";
+    cin >> lD;
+    cout << "Lieu d'arrive : ";
+    cin >> lA;
+    Trajet* parcoursPossible[nbTrajetActuel];
+    // Parcours en profondeurs
+    for (int i = 0; i < nbTrajetActuel; i++) {
+        if(strcmp(tableauTrajet[i]->GetLieuArrivee(), lA) == 0) {
+            // Bon lieu de depart
+            Trajet* sommet = tableauTrajet[i];
+            for (int j = 0; j < nbTrajetActuel; j++) {
+
+            }
+        }
+    }
+}
+
+void parcoursEnProfondeur() {
+
 }
 
 int Catalogue::ajouterTrajet(Trajet * trajet) {

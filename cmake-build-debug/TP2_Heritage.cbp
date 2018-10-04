@@ -8,106 +8,108 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/cygdrive/d/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/cmake-build-debug"/>
+				<Option working_dir="D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/OneDrive/OneDrive\ -\ K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/OneDrive/OneDrive\ -\ K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/OneDrive/OneDrive\ -\ K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/OneDrive/OneDrive\ -\ K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/cygdrive/d/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/OneDrive/OneDrive\ -\ K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/OneDrive/OneDrive\ -\ K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/OneDrive/OneDrive\ -\ K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/OneDrive/OneDrive\ -\ K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="TP2_Heritage">
-				<Option output="/cygdrive/d/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/cmake-build-debug/TP2_Heritage.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/cygdrive/d/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/cmake-build-debug"/>
+				<Option output="D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/cmake-build-debug/TP2_Heritage.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/x86_64-pc-cygwin"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/../include/w32api"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/OneDrive/OneDrive\ -\ K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 TP2_Heritage"/>
-					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/OneDrive/OneDrive\ -\ K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/OneDrive/OneDrive\ -\ K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/OneDrive/OneDrive\ -\ K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 TP2_Heritage"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="TP2_Heritage/fast">
-				<Option output="/cygdrive/d/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/cmake-build-debug/TP2_Heritage.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/cygdrive/d/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/cmake-build-debug"/>
+				<Option output="D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/cmake-build-debug/TP2_Heritage.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/x86_64-pc-cygwin"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include/c++/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/../include/w32api"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/OneDrive/OneDrive\ -\ K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 TP2_Heritage/fast"/>
-					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/OneDrive/OneDrive\ -\ K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/OneDrive/OneDrive\ -\ K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/OneDrive/OneDrive\ -\ K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 TP2_Heritage/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/cygdrive/d/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/cmake-build-debug"/>
+				<Option working_dir="D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/OneDrive/OneDrive\ -\ K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/OneDrive/OneDrive\ -\ K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/OneDrive/OneDrive\ -\ K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/d/OneDrive/OneDrive\ -\ K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/cygdrive/d/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/Catalogue.cpp">
+		<Unit filename="D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/Catalogue.cpp">
 			<Option target="TP2_Heritage"/>
 		</Unit>
-		<Unit filename="/cygdrive/d/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/Catalogue.h">
+		<Unit filename="D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/Catalogue.h">
 			<Option target="TP2_Heritage"/>
 		</Unit>
-		<Unit filename="/cygdrive/d/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/Trajet.cpp">
+		<Unit filename="D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/Trajet.cpp">
 			<Option target="TP2_Heritage"/>
 		</Unit>
-		<Unit filename="/cygdrive/d/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/Trajet.h">
+		<Unit filename="D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/Trajet.h">
 			<Option target="TP2_Heritage"/>
 		</Unit>
-		<Unit filename="/cygdrive/d/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/TrajetCompose.cpp">
+		<Unit filename="D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/TrajetCompose.cpp">
 			<Option target="TP2_Heritage"/>
 		</Unit>
-		<Unit filename="/cygdrive/d/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/TrajetCompose.h">
+		<Unit filename="D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/TrajetCompose.h">
 			<Option target="TP2_Heritage"/>
 		</Unit>
-		<Unit filename="/cygdrive/d/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/TrajetSimple.cpp">
+		<Unit filename="D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/TrajetSimple.cpp">
 			<Option target="TP2_Heritage"/>
 		</Unit>
-		<Unit filename="/cygdrive/d/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/TrajetSimple.h">
+		<Unit filename="D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/TrajetSimple.h">
 			<Option target="TP2_Heritage"/>
 		</Unit>
-		<Unit filename="/cygdrive/d/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/main.cpp">
+		<Unit filename="D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/main.cpp">
 			<Option target="TP2_Heritage"/>
 		</Unit>
-		<Unit filename="/cygdrive/d/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/CMakeLists.txt">
+		<Unit filename="D:/OneDrive/OneDrive - K3v/Documents/C++/TP2_Heritage/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
