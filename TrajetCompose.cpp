@@ -15,7 +15,7 @@ using namespace std;
 
 //------------------------------------------------------ Include personnel
 #include "TrajetCompose.h"
-#include "ListeTrajets.h"
+#include "CollectionTrajets.h"
 
 //------------------------------------------------------------- Constantes
 
@@ -65,7 +65,7 @@ TrajetCompose::TrajetCompose(unsigned int capaciteMax)
     cout << "Appel au constructeur de TrajetCompose" << endl;
     #endif
 
-	listeDeTrajets = new ListeTrajets[capaciteMax];
+	listeDeTrajets = new CollectionTrajets[capaciteMax];
 } //----- Fin de TrajetCompose
 
 

@@ -1,10 +1,10 @@
 /*************************************************************************
-                           ListeTrajets  -  description
+                           CollectionTrajets  -  description
                              -------------------
     début                : 27/09/2018
 *************************************************************************/
 
-//---------- Interface de la classe ListeTrajets (fichier ListeTrajets.h) ----------------
+//---------- Interface de la classe CollectionTrajets (fichier CollectionTrajets.h) ----------------
 #if ! defined (LISTETRAJETS_H)
 #define LISTETRAJETS_H
 
@@ -16,12 +16,12 @@
 //------------------------------------------------------------------ Types
 
 //------------------------------------------------------------------------
-// Rôle de la classe ListeTrajets
+// Rôle de la classe CollectionTrajets
 //
 //
 //------------------------------------------------------------------------
 
-class ListeTrajets
+class CollectionTrajets
 {
 	//----------------------------------------------------------------- PUBLIC
 
@@ -84,13 +84,13 @@ class ListeTrajets
 		//------------------------------------------------- Surcharge d'opérateurs
 
 		//-------------------------------------------- Constructeurs - destructeur
-	    ListeTrajets(unsigned int capaciteMax = NOMBRE_TRAJETS_MAX_DEFAUT);
+	    CollectionTrajets(unsigned int capaciteMax = NOMBRE_TRAJETS_MAX_DEFAUT);
 	    // Mode d'emploi :
 	    //
 	    // Contrat :
 	    //
 
-	    virtual ~ListeTrajets();
+	    virtual ~CollectionTrajets();
 	    // Mode d'emploi :
 	    //
 	    // Contrat :
@@ -120,6 +120,6 @@ class ListeTrajets
 
 };
 
-//-------------------------------- Autres définitions dépendantes de ListeTrajets
+//-------------------------------- Autres définitions dépendantes de CollectionTrajets
 
 #endif // LISTETRAJETS_H

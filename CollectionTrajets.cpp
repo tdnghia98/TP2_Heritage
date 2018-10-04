@@ -1,10 +1,10 @@
 /*************************************************************************
-                           ListeTrajets  -  description
+                           CollectionTrajets  -  description
                              -------------------
     début                : 27/09/2018
 *************************************************************************/
 
-//---------- Réalisation de la classe ListeTrajets (fichier ListeTrajets.cpp) ------------
+//---------- Réalisation de la classe CollectionTrajets (fichier CollectionTrajets.cpp) ------------
 
 //---------------------------------------------------------------- INCLUDE
 
@@ -14,7 +14,7 @@ using namespace std;
 #include <cstring>
 
 //------------------------------------------------------ Include personnel
-#include "ListeTrajets.h"
+#include "CollectionTrajets.h"
 #include "Trajet.h"
 
 //------------------------------------------------------------- Constantes
@@ -22,7 +22,7 @@ using namespace std;
 //----------------------------------------------------------------- PUBLIC
 
 //----------------------------------------------------- Méthodes publiques
-void ListeTrajets::Afficher(int profondeur) const
+void CollectionTrajets::Afficher(int profondeur) const
 // Algorithme :
 //
 {
@@ -44,7 +44,7 @@ void ListeTrajets::Afficher(int profondeur) const
 	cout << "}" << endl;
 } //----- Fin de Méthode
 
-void ListeTrajets::AjouterTrajet(Trajet *trajet)
+void CollectionTrajets::AjouterTrajet(Trajet *trajet)
 // Algorithme :
 //
 {
@@ -56,7 +56,7 @@ void ListeTrajets::AjouterTrajet(Trajet *trajet)
 	trajets[nombreTrajetsCourant++] = trajet;
 } //----- Fin de Méthode
 
-void ListeTrajets::RetirerDernierTrajet()
+void CollectionTrajets::RetirerDernierTrajet()
 // Algorithme :
 //
 {
@@ -67,28 +67,28 @@ void ListeTrajets::RetirerDernierTrajet()
 	}
 }
 
-Trajet* ListeTrajets::GetPremierTrajet() const
+Trajet* CollectionTrajets::GetPremierTrajet() const
 // Algorithme :
 //
 {
 	return trajets[0];
 }
 
-Trajet* ListeTrajets::GetDernierTrajet() const
+Trajet* CollectionTrajets::GetDernierTrajet() const
 // Algorithme :
 //
 {
 	return trajets[nombreTrajetsCourant - 1];
 }
 
-int ListeTrajets::GetNombreTrajetsCourant() const
+int CollectionTrajets::GetNombreTrajetsCourant() const
 // Algorithme :
 //
 {
 	return nombreTrajetsCourant;
 }
 
-Trajet* ListeTrajets::GetTrajet(int indice) const
+Trajet* CollectionTrajets::GetTrajet(int indice) const
 // Algorithme :
 //
 {
@@ -102,14 +102,14 @@ Trajet* ListeTrajets::GetTrajet(int indice) const
 	return trajet;
 }
 
-bool ListeTrajets::EstVide() const
+bool CollectionTrajets::EstVide() const
 // Algorithme :
 //
 {
 	return nombreTrajetsCourant == 0;
 }
 
-bool ListeTrajets::EstDans(Trajet *trajet) const
+bool CollectionTrajets::EstDans(Trajet *trajet) const
 {
 	for (int iTrajet = 0; iTrajet < nombreTrajetsCourant; iTrajet++)
 	{
@@ -124,25 +124,25 @@ bool ListeTrajets::EstDans(Trajet *trajet) const
 //------------------------------------------------- Surcharge d'opérateurs
 
 //-------------------------------------------- Constructeurs - destructeur
-ListeTrajets::ListeTrajets(unsigned int capaciteMax)
+CollectionTrajets::CollectionTrajets(unsigned int capaciteMax)
 // Algorithme :
 //
 {
 	#ifdef MAP
-	    cout << "Appel au constructeur de ListeTrajets" << endl;
+	    cout << "Appel au constructeur de CollectionTrajets" << endl;
 	#endif
 
 	trajets = new Trajet*[capaciteMax];
 	nombreTrajetsMax = capaciteMax;
 	nombreTrajetsCourant = 0;
-} //----- Fin de ListeTrajets
+} //----- Fin de CollectionTrajets
 
-ListeTrajets::~ListeTrajets()
+CollectionTrajets::~CollectionTrajets()
 // Algorithme :
 //
 {
 	#ifdef MAP
-	    cout << "Appel au destructeur de ListeTrajets" << endl;
+	    cout << "Appel au destructeur de CollectionTrajets" << endl;
 	#endif
 
 	for (int curseur = 0; curseur < nombreTrajetsCourant; curseur++)
@@ -151,14 +151,14 @@ ListeTrajets::~ListeTrajets()
     }
 
     delete [] trajets;
-} //----- Fin de ~ListeTrajets
+} //----- Fin de ~CollectionTrajets
 
 //------------------------------------------------------------------ PRIVE
 
 //----------------------------------------------------- Méthodes protégées
 
 //------------------------------------------------------- Méthodes privées
-void ListeTrajets::Ajuster()
+void CollectionTrajets::Ajuster()
 // Algorithme :
 //
 {

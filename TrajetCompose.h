@@ -10,7 +10,7 @@
 
 //--------------------------------------------------- Interfaces utilisées
 #include "Trajet.h"
-#include "ListeTrajets.h"
+#include "CollectionTrajets.h"
 
 //------------------------------------------------------------- Constantes
 enum CODE_RETOUR_AJOUT {CONTRAINTE_NON_VERIFIEE, AJOUTE};
@@ -80,7 +80,7 @@ class TrajetCompose : public Trajet
 		bool ContrainteLieuEstVerifiee(const Trajet & trajet) const;
 
 		//----------------------------------------------------- Attributs privées
-		ListeTrajets *listeDeTrajets;
+		CollectionTrajets *listeDeTrajets;
 };
 
 //-------------------------------- Autres définitions dépendantes de TrajetCompose

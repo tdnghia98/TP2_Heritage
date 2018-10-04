@@ -10,7 +10,7 @@
 
 //--------------------------------------------------- Interfaces utilisées
 #include "Trajet.h"
-#include "ListeTrajets.h"
+#include "CollectionTrajets.h"
 #include "TrajetSimple.h"
 #include "TrajetCompose.h"
 
@@ -70,6 +70,12 @@ class Catalogue
 		// Contrat :
 		//
 
+		void RechercherVoyageSimple();
+		// Mode d'emploi :
+		//
+		// Contrat :
+		//
+
 		//------------------------------------------------- Surcharge d'opérateurs
 
 		//-------------------------------------------- Constructeurs - destructeur
@@ -94,7 +100,7 @@ class Catalogue
 
 	private:
 		//----------------------------------------------------- Méthodes privées
-		void ParcoursProfondeur(ListeTrajets *listeDeTrajets, Trajet *sommet, ListeTrajets *listeTraitement,
+		void ParcoursProfondeur(CollectionTrajets *listeDeTrajets, Trajet *sommet, CollectionTrajets *listeTraitement,
 			char *lieuDepart, char *lieuArrivee, int *nombreVoyagesTrouves);
 		// Mode d'emploi :
 		//
@@ -120,7 +126,7 @@ class Catalogue
 		//
 
 		//----------------------------------------------------- Attributs privées
-		ListeTrajets *listeDeTrajets;
+		CollectionTrajets *listeDeTrajets;
 };
 
 //-------------------------------- Autres définitions dépendantes de Catalogue

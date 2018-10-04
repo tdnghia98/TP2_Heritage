@@ -17,7 +17,7 @@ using namespace std;
 #include "Catalogue.h"
 #include "TrajetCompose.h"
 
-enum CHOIX_UTILISATEUR {AFFICHAGE_CATALOGUE = 1, AJOUT_TRAJET, RECHERCHE_VOYAGE, FIN};
+enum CHOIX_UTILISATEUR {AFFICHAGE_CATALOGUE = 1, AJOUT_TRAJET, RECHERCHE_VOYAGE_SIMPLE, RECHERCHE_VOYAGE_COMPOSE, FIN};
 enum CREATION_TRAJET {TRAJET_SIMPLE = 1};
 
 //------------------------------------------------------------- Constantes
@@ -57,7 +57,7 @@ void Catalogue::Menu()
 	while (saisieUtilisateur != FIN)
 	{
 		AfficherMenu();
-		saisieUtilisateur = SaisirChoix(1, 4);
+		saisieUtilisateur = SaisirChoix(AFFICHAGE_CATALOGUE, FIN);
 
 		switch (saisieUtilisateur) {
 			case AFFICHAGE_CATALOGUE:
@@ -66,11 +66,49 @@ void Catalogue::Menu()
 			case AJOUT_TRAJET:
 				AjouterTrajet();
 				break;
-			case RECHERCHE_VOYAGE:
-				RechercherVoyage();
+			case RECHERCHE_VOYAGE_SIMPLE:
+				RechercherVoyageSimple();
+				break;
+			case RECHERCHE_VOYAGE_COMPOSE:
+				RechercherVoyageCompose();
 				break;
 		}
 	}
+}
+
+void Catalogue::RechercherVoyageSimple()
+{
+	char *lieuDepart = new char[100],
+	*lieuArrivee = new char[100];
+
+	cout << endl << "--- Recherche d'un voyage ---" << endl;
+	cout << "Saisir le lieu de depart : ";
+	cin >> lieuDepart;
+	cout << "Saisir le lieu d'arrivee : ";
+	cin >> lieuArrivee;
+
+	Trajet *trajet;
+	int *nombreVoyagesTrouves = new int;
+
+	cout << "Voyage de \"" << lieuDepart << "\" à \"" << lieuArrivee << "\" : " << endl;
+
+	*nombreVoyagesTrouves = 0;
+	for (int iTrajet = 0; iTrajet < listeDeTrajets->GetNombreTrajetsCourant(); iTrajet++)
+	{
+		trajet = listeDeTrajets->GetTrajet(iTrajet);
+		if (strcmp(lieuDepart, trajet->GetLieuDepart()) == 0 && strcmp(lieuArrivee, trajet->GetLieuArrivee()) == 0)
+		{
+			cout << "VOYAGE " << ++(*nombreVoyagesTrouves) << " : " << endl;
+			trajet->Afficher();
+		}
+	}
+
+	if (*nombreVoyagesTrouves == 0)
+	{
+		cout << "Aucun voyage trouve !" << endl;
+	}
+
+	delete nombreVoyagesTrouves;
 }
 
 void Catalogue::RechercherVoyageCompose()
@@ -91,7 +129,7 @@ void Catalogue::RechercherVoyageCompose()
 
 	cout << "Voyage de \"" << lieuDepart << "\" à \"" << lieuArrivee << "\" : " << endl;
 
-	ListeTrajets *listeTraitement = new ListeTrajets;
+	CollectionTrajets *listeTraitement = new CollectionTrajets;
 	*nombreVoyagesTrouves = 0;
 	for (int iTrajet = 0; iTrajet < listeDeTrajets->GetNombreTrajetsCourant(); iTrajet++)
 	{
@@ -121,7 +159,7 @@ void Catalogue::RechercherTrajet(char *lieuDepart, char *lieuArrivee)
 
 	cout << "Voyage de \"" << lieuDepart << "\" à \"" << lieuArrivee << "\" : " << endl;
 
-	ListeTrajets *listeTraitement = new ListeTrajets;
+	CollectionTrajets *listeTraitement = new CollectionTrajets;
 	*nombreVoyagesTrouves = 0;
 	for (int iTrajet = 0; iTrajet < listeDeTrajets->GetNombreTrajetsCourant(); iTrajet++)
 	{
@@ -232,7 +270,7 @@ Catalogue::Catalogue(unsigned int capaciteMax)
 	    cout << "Appel au constructeur Catalogue" << endl;
 	#endif
 
-	listeDeTrajets = new ListeTrajets[capaciteMax];
+	listeDeTrajets = new CollectionTrajets[capaciteMax];
 } //----- Fin de Catalogue
 
 Catalogue::~Catalogue()
@@ -249,7 +287,7 @@ Catalogue::~Catalogue()
 //----------------------------------------------------- Méthodes protégées
 
 //------------------------------------------------------- Méthodes privées
-void Catalogue::ParcoursProfondeur(ListeTrajets *listeDeTrajets, Trajet *sommet, ListeTrajets *listeTraitement,
+void Catalogue::ParcoursProfondeur(CollectionTrajets *listeDeTrajets, Trajet *sommet, CollectionTrajets *listeTraitement,
 	char *lieuDepart, char *lieuArrivee, int *nombreVoyagesTrouves)
 // Algorithme :
 //
@@ -285,8 +323,9 @@ void Catalogue::AfficherMenu()
 	cout << endl << "--- Menu de gestion d'un catalogue de voyage ---" << endl;
 	cout << "1 - Afficher le catalogue" << endl;
 	cout << "2 - Inserer un trajet" << endl;
-	cout << "3 - Rechercher un voyage" << endl;
-	cout << "4 - Quitter" << endl << endl;
+	cout << "3 - Rechercher un voyage (simple)" << endl;
+	cout << "4 - Rechercher un voyage (compose)" << endl;
+	cout << "5 - Quitter" << endl << endl;
 } //----- fin de AfficherMenu
 
 int Catalogue::SaisirChoix(int borneInf, int borneSup)

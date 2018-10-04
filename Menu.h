@@ -29,46 +29,4 @@
 //---------------------------------------------------- Fonctions publiques
 int main();
 
-void RechercherVoyage(Catalogue *catalogue);
-// Mode d'emploi :
-//
-// Contrat :
-//
-
-int SaisirNombreTrajets();
-// Mode d'emploi :
-//
-// Contrat :
-//
-
-TrajetCompose* CreerTrajetCompose(int nombreTrajetsSimples);
-// Mode d'emploi :
-//
-// Contrat :
-//
-
-void CreerTrajet(Catalogue *catalogue);
-// Mode d'emploi :
-//
-// Contrat :
-//
-
-TrajetSimple* CreerTrajetSimple();
-// Mode d'emploi :
-//
-// Contrat :
-//
-
-int SaisirChoix(int borneInf, int borneSup);
-// Mode d'emploi :
-//
-// Contrat :
-//
-
-void AfficherChoix();
-// Mode d'emploi :
-//
-// Contrat :
-//
-
 #endif // MENU_H
